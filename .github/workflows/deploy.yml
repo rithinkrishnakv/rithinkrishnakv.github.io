@@ -1,4 +1,4 @@
-name: Deploy Astro site to Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Build Astro site
+      - name: Build and upload Astro site
         uses: withastro/action@v6
         with:
           node-version: 22.19.0
