@@ -14,24 +14,17 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
 ---
 
 <BaseLayout
-  title="notes"
+  title="Notes"
   description="Notes on security research, tools, and things worth remembering. Currently empty — on purpose."
 >
   <section class="section section--first">
     <div class="wrap">
-      <h1 data-intro>notes</h1>
+      <h1 data-intro>Notes</h1>
 
       {
         notes.length === 0 ? (
           <div class="empty" data-reveal-group>
-            <p class="text-secondary">nothing here yet.</p>
-            <p class="text-secondary">that's not a bug.</p>
-            <p>
-              when something is worth writing down — a bug that turned into
-              a lesson, a rabbit hole that ate a weekend, a question that
-              wouldn't leave me alone — it'll show up here.
-            </p>
-            <p class="meta">check back later, or subscribe via <a href="/rss.xml" class="link">rss</a>.</p>
+            <p class="text-secondary">No notes yet.</p>
           </div>
         ) : (
           <ul class="notes-list" data-reveal-group>
@@ -49,6 +42,11 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
               </li>
             ))}
           </ul>
+        )
+      }
+      {
+        notes.length > 0 && (
+          <p class="meta"><a href="/rss.xml" class="link">Subscribe via RSS →</a></p>
         )
       }
     </div>

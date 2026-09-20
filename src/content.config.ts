@@ -27,13 +27,12 @@ const notes = defineCollection({
 
 // ---------------------------------------------------------------------------
 // commons/ — a shared reference collection of security tools, bookmarklets,
-// browser addons, and proxy addons assembled from public projects (source:
-// WebHackersWeapons). This is NOT a personal toolbox — see /commons/.
+// browser addons, and proxy addons assembled from public projects.
 //
 // Structured as a handful of data files (one per source section) rather
 // than one file per entry, since the full dataset runs into the hundreds
 // of items. Each file is a JSON array validated against `entrySchema`.
-// Field names/cardinality follow what the source actually provides:
+// Field names/cardinality reflect the collection's data model:
 // every entry has at most one `language` (never multiple), so it's a
 // scalar, not an array; `platforms` genuinely is a list per entry.
 //
@@ -45,14 +44,13 @@ const entrySchema = z.object({
   name: z.string(),
   link: z.string().url(),
   description: z.string().optional(),
-  // The source's own "Type" column — Recon, Scanner, Fuzzer, Proxy,
-  // Army-Knife, Exploit, Env, Utils, Etc. Free text rather than an enum
-  // so it stays faithful to the source instead of a taxonomy invented here.
+  // Recon, Scanner, Fuzzer, Proxy, Army-Knife, Exploit, Env, Utils, Etc.
+  // Free text rather than an enum to preserve the existing data model.
   type: z.string(),
   tags: z.array(z.string()).default([]),
   language: z.string().optional(),
   platforms: z.array(z.string()).default([]),
-  // Which of the source's own tables this came from — e.g. "Tools",
+  // Which collection table this came from — e.g. "Tools",
   // "Bookmarklets", "Browser Addons", "Burpsuite, Caido and ZAP Addons".
   sourceSection: z.string(),
 });

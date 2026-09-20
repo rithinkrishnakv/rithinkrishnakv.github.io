@@ -5,22 +5,22 @@ import { getCollection } from "astro:content";
 const builds = (await getCollection("builds")).sort((a, b) => b.data.weight - a.data.weight);
 
 const statusLabel: Record<string, string> = {
-  active: "in progress",
-  shipped: "shipped",
-  paused: "paused",
-  archived: "archived",
+  active: "In progress",
+  shipped: "Shipped",
+  paused: "Paused",
+  archived: "Archived",
 };
 ---
 
 <BaseLayout
-  title="builds"
+  title="Builds"
   description="An honest register of official projects — security tools and experiments, with real status, no portfolio gloss."
 >
   <section class="section section--first">
     <div class="wrap wrap--wide">
-      <h1 data-intro>builds</h1>
+      <h1 data-intro>Builds</h1>
       <p class="text-secondary intro" data-intro style="animation-delay: 80ms;">
-        official projects only. status is honest — "in progress" usually
+        Official projects only. Status is honest — "in progress" usually
         means still actively broken somewhere.
       </p>
     </div>
@@ -49,7 +49,7 @@ const statusLabel: Record<string, string> = {
                 <span class="entry__title-row">
                   <span class="entry__name">{build.data.name}</span>
                   <span class={`status status--${build.data.visibility === "private" ? "private" : build.data.status}`}>
-                    {build.data.visibility === "private" ? "private" : statusLabel[build.data.status]}
+                    {build.data.visibility === "private" ? "Private" : statusLabel[build.data.status]}
                   </span>
                 </span>
 
@@ -62,7 +62,7 @@ const statusLabel: Record<string, string> = {
                 ) : (
                   build.data.visibility === "private" && (
                     <span class="entry__summary text-secondary">
-                      private repository — not public, nothing more to show here.
+                      Private repository — not public, nothing more to show here.
                     </span>
                   )
                 )}
@@ -78,11 +78,11 @@ const statusLabel: Record<string, string> = {
 
               <span class="entry__action meta">
                 {build.data.visibility === "private"
-                  ? "no public repo"
+                  ? "No public repo"
                   : build.data.link
-                    ? "visit ↗"
+                    ? "Visit ↗"
                     : build.data.repo
-                      ? "public repository ↗"
+                      ? "Public repository ↗"
                       : ""}
               </span>
             </a>

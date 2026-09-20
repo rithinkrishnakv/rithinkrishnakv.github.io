@@ -2,8 +2,8 @@
 
 export const SITE = {
   name: "Rithin Krishna K V",
-  shortName: "rithin",
-  role: "security researcher / builder / professional rabbit-hole starter",
+  shortName: "Rithin Krishna K V",
+  role: "Security researcher / builder / professional rabbit-hole starter",
   description:
     "A personal notebook for security research, tools, and things worth keeping — not a portfolio.",
   // Keep this in sync with `site` (and `base`, if used) in astro.config.mjs
@@ -13,9 +13,7 @@ export const SITE = {
 export const LINKS = {
   github: "https://github.com/rithinkrishnakv",
   portfolio: "https://rithinkrishnakv.vercel.app",
-  // TODO: verify this is your actual LinkedIn URL before deploying
   linkedin: "https://www.linkedin.com/in/rithin-krishna-k-v-15593b381/",
-  twitter: "https://x.com/R1thin",
-  // TODO: replace with a real address (or a contact form link) before deploying
-  email: "261096925+rithinkrishnakv@users.noreply.github.com",
+  x: "https://x.com/R1thin",
+  email: "mailto:rithinkrishna@proton.me",
 };

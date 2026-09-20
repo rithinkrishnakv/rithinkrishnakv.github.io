@@ -14,7 +14,7 @@ const canonicalURL = new URL(target, SITE.url);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>redirecting — {SITE.shortName}</title>
+    <title>Redirecting — {SITE.shortName}</title>
     <meta name="robots" content="noindex, follow" />
     <link rel="canonical" href={canonicalURL} />
     <meta http-equiv="refresh" content={`0; url=${target}`} />
@@ -36,7 +36,7 @@ const canonicalURL = new URL(target, SITE.url);
   </head>
   <body>
     <p>
-      this section moved to <a href={target}>/commons/</a>.
+      This section moved to <a href={target}>/commons/</a>.
     </p>
   </body>
 </html>

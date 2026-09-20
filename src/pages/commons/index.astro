@@ -34,23 +34,19 @@ const dataEndpoint = `${import.meta.env.BASE_URL}commons-data.json`.replace(/\/+
 ---
 
 <BaseLayout
-  title="security commons"
+  title="Security commons"
   description={`A shared, searchable index of ${total} security tools, extensions, and references assembled from public projects — not software I wrote.`}
 >
   <section class="section section--first">
     <div class="wrap wrap--wide">
-      <h1 data-intro>security commons</h1>
+      <h1 data-intro>Security commons</h1>
       <p class="hero__subtitle text-secondary" data-intro style="animation-delay: 80ms;">
-        tools, extensions, references, and other things the security world
+        Tools, extensions, references, and other things the security world
         keeps around.
       </p>
       <p class="hero__credit meta" data-intro style="animation-delay: 160ms;">
-        assembled from the{" "}
-        <a href="https://github.com/hahwul/WebHackersWeapons" class="link" target="_blank" rel="noopener noreferrer">
-          WebHackersWeapons
-        </a>{" "}
-        project — i'm curating this, not claiming authorship. credit belongs
-        to each project's own author, linked from every entry.
+        Each entry links to its source project. This is a shared index, not a
+        claim of authorship.
       </p>
     </div>
   </section>
@@ -59,9 +55,9 @@ const dataEndpoint = `${import.meta.env.BASE_URL}commons-data.json`.replace(/\/+
     total === 0 ? (
       <section class="section">
         <div class="wrap wrap--wide empty-top">
-          <p class="text-secondary">this collection is still being assembled.</p>
+          <p class="text-secondary">This collection is still being assembled.</p>
           <p class="text-secondary">
-            nothing indexed yet — check back soon, or see{" "}
+            Nothing indexed yet — check back soon, or see{" "}
             <a href="/notes/" class="link">
               notes
             </a>{" "}
@@ -189,12 +185,12 @@ const dataEndpoint = `${import.meta.env.BASE_URL}commons-data.json`.replace(/\/+
         </div>
 
         <div class="wrap wrap--wide">
-          <p class="meta loading-state" id="commons-loading">loading the collection…</p>
+          <p class="meta loading-state" id="commons-loading">Loading the collection…</p>
 
           <p class="meta empty-results" id="commons-empty" hidden>
-            nothing found.
+            Nothing found.
             <br />
-            try a different name, tag, or{" "}
+            Try a different name, tag, or{" "}
             <button type="button" class="link js-commons-reset">
               clear the filters
             </button>.
@@ -1096,5 +1092,6 @@ const dataEndpoint = `${import.meta.env.BASE_URL}commons-data.json`.replace(/\/+
     .controls-sticky {
       transition: none;
     }
+
   }
 </style>

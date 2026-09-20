@@ -26,7 +26,7 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
     <header class="note__header wrap" data-reveal-group>
       <p class="meta">
         {dateFmt.format(date)}
-        {updated && <> · updated {dateFmt.format(updated)}</>}
+        {updated && <> · Updated {dateFmt.format(updated)}</>}
       </p>
       <h1>{title}</h1>
       {subtitle && <p class="note__subtitle text-secondary">{subtitle}</p>}
@@ -46,7 +46,7 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
     </div>
 
     <nav class="note__nav wrap" aria-label="Note navigation" data-reveal>
-      <a href="/notes/" class="link">← all notes</a>
+      <a href="/notes/" class="link">← All notes</a>
       <div class="note__adjacent">
         {prev && (
           <a href={`/notes/${prev.id}/`} class="link">

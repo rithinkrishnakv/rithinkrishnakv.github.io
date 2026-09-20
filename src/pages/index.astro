@@ -11,85 +11,69 @@ const commonsCount = commonsFiles.reduce((sum, file) => sum + file.data.length, 
 const topBuilds = builds.slice(0, 3);
 
 const primaryLinks = [
-  { label: "portfolio", href: LINKS.portfolio },
-  { label: "github", href: LINKS.github },
-  { label: "linkedin", href: LINKS.linkedin },
+  { label: "Portfolio", href: LINKS.portfolio },
+  { label: "GitHub", href: LINKS.github },
+  { label: "LinkedIn", href: LINKS.linkedin },
+  { label: "X / Twitter", href: LINKS.x },
 ];
 ---
 
 <BaseLayout title={SITE.name}>
   <section class="hero wrap">
     <p class="meta" data-intro style="animation-delay: 0ms;">{SITE.role}</p>
-    <h1 data-intro style="animation-delay: 80ms;">{SITE.name.toLowerCase()}</h1>
+    <h1 data-intro style="animation-delay: 80ms;">{SITE.name}</h1>
 
     <div class="hero__copy" data-intro style="animation-delay: 200ms;">
-      <p>i like taking things apart.</p>
+      <p>I like taking things apart.</p>
       <p>
-        sometimes that's a web application. sometimes it's an API, a security
+        Sometimes that's a web application. Sometimes it's an API, a security
         tool, a piece of code, or a system that makes no sense until you
         stare at it for way too long.
       </p>
       <p>
-        i learn a lot by doing stupid things on purpose and then figuring
+        I learn a lot by doing stupid things on purpose and then figuring
         out why they worked.
       </p>
       <p>
-        i'm interested in security research, bug hunting, digital
+        I'm interested in security research, bug hunting, digital
         investigations, automation, and building small tools when the
         existing ones annoy me.
       </p>
-      <p class="text-secondary">this isn't my portfolio.</p>
-      <p>it's just a place to put things i don't want to forget.</p>
+      <p class="text-secondary">This isn't my portfolio.</p>
+      <p>It's just a place to put things I don't want to forget.</p>
       <p class="text-secondary">
-        a bug that turned into a lesson.<br />
-        a tool i built because i was curious.<br />
-        something interesting i found while researching.<br />
-        a question i couldn't leave alone.<br />
-        sometimes just a thought that seemed worth writing down.
+        A bug that turned into a lesson.<br />
+        A tool I built because I was curious.<br />
+        Something interesting I found while researching.<br />
+        A question I couldn't leave alone.<br />
+        Sometimes just a thought that seemed worth writing down.
       </p>
-      <p>there probably won't be a new post every week.</p>
-      <p class="text-secondary">i don't have that many things to say.</p>
-      <p>but when i do have something worth saying, it'll end up here.</p>
+      <p>There probably won't be a new post every week.</p>
+      <p class="text-secondary">I don't have that many things to say.</p>
+      <p>But when I do have something worth saying, it'll end up here.</p>
     </div>
 
-    <ul class="hero__links" data-intro style="animation-delay: 320ms;">
-      {
-        primaryLinks.map((item) => (
-          <li>
-            <a href={item.href} class="link" target="_blank" rel="noopener noreferrer">
-              {item.label}
-              <span class="link__arrow" aria-hidden="true">↗</span>
-            </a>
-          </li>
-        ))
-      }
-      <li>
-        <a href={LINKS.email} class="link">
-          email
-        </a>
-      </li>
-    </ul>
   </section>
 
   <p class="wrap divider meta" data-reveal>
-    some things are worth documenting before they become another tab you forgot to close.
+    Some things are worth documenting before they become another tab you forgot to close.
   </p>
 
   <section class="section">
     <div class="wrap" data-reveal-group>
-      <h2>notes</h2>
+      <h2>Notes</h2>
       {
         notes.length === 0 ? (
           <>
-            <p class="text-secondary">there aren't any yet.</p>
-            <p class="text-secondary">that's fine.</p>
+            <p class="text-secondary">There aren't any yet.</p>
+            <p class="text-secondary">That's fine.</p>
             <p>
-              this is where the things that don't deserve a full project,
-              write-up, or another twelve browser tabs will end up. maybe a
-              security rabbit hole. maybe something learned the hard way.
-              maybe just a question that wouldn't let go.
+              This is where the things that don't deserve a full project,
+              write-up, or another twelve browser tabs will end up. Maybe a
+              security rabbit hole. Maybe something learned the hard way.
+              Maybe just a question that wouldn't let go.
             </p>
-            <p>when there's something worth writing, it'll show up here.</p>
+            <p>When there's something worth writing, it'll show up here.</p>
           </>
         ) : (
           <ul class="teaser-list">
@@ -104,7 +88,7 @@ const primaryLinks = [
         )
       }
       <a href="/notes/" class="link link--accent">
-        all notes <span class="link__arrow" aria-hidden="true">→</span>
+        All notes <span class="link__arrow" aria-hidden="true">→</span>
       </a>
     </div>
   </section>
@@ -112,9 +96,9 @@ const primaryLinks = [
   <section class="section">
     <hr class="wrap wrap--wide" data-reveal-line />
     <div class="wrap">
-      <h2>security commons</h2>
+      <h2>Security commons</h2>
       <p class="text-secondary">
-        a shared index of tools, extensions, references, and other things
+        A shared index of tools, extensions, references, and other things
         the security world keeps around — assembled from public projects,
         not built by me.
       </p>
@@ -124,7 +108,7 @@ const primaryLinks = [
         )
       }
       <a href="/commons/" class="link link--accent">
-        explore the commons <span class="link__arrow" aria-hidden="true">→</span>
+        Explore the commons <span class="link__arrow" aria-hidden="true">→</span>
       </a>
     </div>
   </section>
@@ -132,10 +116,10 @@ const primaryLinks = [
   <section class="section">
     <hr class="wrap wrap--wide" data-reveal-line />
     <div class="wrap">
-      <h2>things i've built</h2>
+      <h2>Things I've built</h2>
       <p class="text-secondary">
-        sometimes writing about a problem isn't enough, so I build something.
-        official projects only — this isn't everything I've touched, just
+        Sometimes writing about a problem isn't enough, so I build something.
+        Official projects only — this isn't everything I've touched, just
         what's real and current.
       </p>
       <ul class="teaser-list">
@@ -151,22 +135,22 @@ const primaryLinks = [
         }
       </ul>
       <a href="/builds/" class="link link--accent">
-        all builds <span class="link__arrow" aria-hidden="true">→</span>
+        All builds <span class="link__arrow" aria-hidden="true">→</span>
       </a>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap" data-reveal>
-      <h2>currently</h2>
-      <p class="text-secondary">learning. breaking things. fixing them.</p>
-      <p class="text-secondary">then breaking them again.</p>
+      <h2>Currently</h2>
+      <p class="text-secondary">Learning. Breaking things. Fixing them.</p>
+      <p class="text-secondary">Then breaking them again.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap" data-reveal-group>
-      <h2>elsewhere</h2>
+      <h2>Elsewhere</h2>
       <ul class="teaser-list teaser-list--inline">
         {
           primaryLinks.map((item) => (
@@ -183,8 +167,8 @@ const primaryLinks = [
   </section>
 
   <p class="wrap divider meta" data-reveal>
-    this site will probably look different later. that's fine — i'm still figuring things out.
-    built on the open web.
+    This site will probably look different later. That's fine — I'm still figuring things out.
+    Built on the open web.
   </p>
 </BaseLayout>
 
@@ -200,15 +184,6 @@ const primaryLinks = [
 
   .hero__copy p {
     max-width: var(--measure);
-  }
-
-  .hero__links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 2rem 0 0;
-    padding: 0;
   }
 
   .divider {
