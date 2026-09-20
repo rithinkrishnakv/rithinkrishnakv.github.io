@@ -1,0 +1,42 @@
+---
+// This section was renamed from /field-kit/ to /commons/. GitHub Pages
+// serves plain static files with no server-side redirect support, so this
+// is a client-side meta-refresh with a real link as a fallback — the
+// standard pattern for redirects on a static host.
+import { SITE } from "@/lib/site";
+
+const target = "/commons/";
+const canonicalURL = new URL(target, SITE.url);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>redirecting — {SITE.shortName}</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <style>
+      body {
+        background: #0b0b0c;
+        color: #efece5;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+      a {
+        color: #c17a49;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      this section moved to <a href={target}>/commons/</a>.
+    </p>
+  </body>
+</html>

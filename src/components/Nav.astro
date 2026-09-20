@@ -1,0 +1,123 @@
+---
+import { SITE } from "@/lib/site";
+
+const { pathname } = Astro.url;
+
+const items = [
+  { href: "/notes/", label: "notes" },
+  { href: "/commons/", label: "commons" },
+  { href: "/builds/", label: "builds" },
+];
+
+function isActive(href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname.startsWith(href);
+}
+---
+
+<header class="nav">
+  <div class="wrap nav__row">
+    <a href="/" class="nav__brand" aria-label={`${SITE.name} — home`}>
+      {SITE.shortName}
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav__list">
+        {
+          items.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="nav__link"
+                aria-current={isActive(item.href) ? "page" : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .nav {
+    padding-block: 1.25rem;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .nav__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .nav__brand {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+
+  .nav__brand:hover,
+  .nav__brand:focus-visible {
+    color: var(--accent);
+  }
+
+  .nav__list {
+    display: flex;
+    gap: clamp(1rem, 3vw, 1.75rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .nav__link {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--text-secondary);
+    position: relative;
+    padding-bottom: 0.2em;
+    display: inline-block;
+    transition: color var(--dur-fast) var(--ease-out), letter-spacing var(--dur-base) var(--ease-physical);
+  }
+
+  .nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur-base) var(--ease-physical);
+  }
+
+  .nav__link:hover,
+  .nav__link:focus-visible {
+    color: var(--text);
+    letter-spacing: 0.04em;
+  }
+
+  .nav__link:hover::after,
+  .nav__link:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  .nav__link[aria-current="page"] {
+    color: var(--accent);
+  }
+
+  .nav__link[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+</style>

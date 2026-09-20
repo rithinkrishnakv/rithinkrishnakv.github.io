@@ -1,0 +1,5604 @@
+[
+  {
+    "name": "jaeles",
+    "link": "https://github.com/jaeles-project/jaeles",
+    "type": "Army-Knife",
+    "tags": [
+      "live-audit"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "The Swiss Army knife for automated Web Application Testing",
+    "language": "Go"
+  },
+  {
+    "name": "ZAP",
+    "link": "https://github.com/zaproxy/zaproxy",
+    "type": "Army-Knife",
+    "tags": [
+      "mitmproxy",
+      "live-audit",
+      "crawl"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "zap"
+    ],
+    "sourceSection": "Tools",
+    "description": "The ZAP core project",
+    "language": "Java"
+  },
+  {
+    "name": "Baudrillard Suite",
+    "link": "https://github.com/bad-antics/baudrillard-suite",
+    "type": "Army-Knife",
+    "tags": [
+      "osint",
+      "recon",
+      "forensics",
+      "social-engineering",
+      "steganography"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Cross-platform security research toolkit with OSINT aggregation, memory forensics, social engineering tools, steganography, and predictive threat modeling.",
+    "language": "Python"
+  },
+  {
+    "name": "Ronin",
+    "link": "https://ronin-rb.dev",
+    "type": "Army-Knife",
+    "tags": [
+      "pentest",
+      "crawl",
+      "recon",
+      "exploit"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Free and Open Source Ruby Toolkit for Security Research and Development",
+    "language": "Ruby"
+  },
+  {
+    "name": "Darkmoon",
+    "link": "https://github.com/ASCIT31/Dark-Moon",
+    "type": "Army-Knife",
+    "tags": [
+      "pentest",
+      "exploit",
+      "recon",
+      "cloud",
+      "report"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Autonomous AI penetration testing platform with agentic reasoning and real exploit execution across web, cloud, identity, CI/CD, Active Directory and Kubernetes",
+    "language": "Python"
+  },
+  {
+    "name": "BurpSuite",
+    "link": "https://portswigger.net/burp",
+    "type": "Army-Knife",
+    "tags": [
+      "mitmproxy",
+      "live-audit",
+      "crawl"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "burp"
+    ],
+    "sourceSection": "Tools",
+    "description": "The BurpSuite Project",
+    "language": "Java"
+  },
+  {
+    "name": "Metasploit",
+    "link": "https://github.com/rapid7/metasploit-framework",
+    "type": "Army-Knife",
+    "tags": [
+      "pentest"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "The world’s most used penetration testing framework",
+    "language": "Ruby"
+  },
+  {
+    "name": "axiom",
+    "link": "https://github.com/pry0cc/axiom",
+    "type": "Army-Knife",
+    "tags": [
+      "infra"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A dynamic infrastructure toolkit for red teamers and bug bounty hunters!",
+    "language": "Shell"
+  },
+  {
+    "name": "Glorp",
+    "link": "https://github.com/denandz/glorp",
+    "type": "Proxy",
+    "tags": [
+      "mitmproxy"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A CLI-based HTTP intercept and replay proxy",
+    "language": "Go"
+  },
+  {
+    "name": "Echo Mirage",
+    "link": "https://sourceforge.net/projects/echomirage.oldbutgold.p/",
+    "type": "Proxy",
+    "tags": [
+      "mitmproxy"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A generic network proxy that uses DLL injection to capture and alter TCP traffic."
+  },
+  {
+    "name": "hetty",
+    "link": "https://github.com/dstotijn/hetty",
+    "type": "Proxy",
+    "tags": [
+      "mitmproxy"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Hetty is an HTTP toolkit for security research. It aims to become an open source alternative to commercial software like Burp Suite Pro, with powerful features tailored to the needs of the infosec and bug bounty community.",
+    "language": "Go"
+  },
+  {
+    "name": "Caido",
+    "link": "https://caido.io",
+    "type": "Proxy",
+    "tags": [
+      "mitmproxy"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "caido"
+    ],
+    "sourceSection": "Tools",
+    "description": "A lightweight web security auditing toolkit",
+    "language": "Rust"
+  },
+  {
+    "name": "EvilProxy",
+    "link": "https://github.com/bbtfr/evil-proxy",
+    "type": "Proxy",
+    "tags": [
+      "mitmproxy"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A ruby http/https proxy to do EVIL things.",
+    "language": "Ruby"
+  },
+  {
+    "name": "proxify",
+    "link": "https://github.com/projectdiscovery/proxify",
+    "type": "Proxy",
+    "tags": [
+      "mitmproxy"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Swiss Army knife Proxy tool for HTTP/HTTPS traffic capture, manipulation and replay",
+    "language": "Go"
+  },
+  {
+    "name": "mitmproxy",
+    "link": "https://github.com/mitmproxy/mitmproxy",
+    "type": "Proxy",
+    "tags": [
+      "mitmproxy"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.",
+    "language": "Python"
+  },
+  {
+    "name": "goverview",
+    "link": "https://github.com/j3ssie/goverview",
+    "type": "Recon",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "goverview - Get an overview of the list of URLs",
+    "language": "Go"
+  },
+  {
+    "name": "intrigue-core",
+    "link": "https://github.com/intrigueio/intrigue-core",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Discover Your Attack Surface",
+    "language": "Ruby"
+  },
+  {
+    "name": "FavFreak",
+    "link": "https://github.com/devanshbatham/FavFreak",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Making Favicon.ico based Recon Great again !",
+    "language": "Python"
+  },
+  {
+    "name": "gitrob",
+    "link": "https://github.com/michenriksen/gitrob",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Reconnaissance tool for GitHub organizations",
+    "language": "Go"
+  },
+  {
+    "name": "knock",
+    "link": "https://github.com/guelfoweb/knock",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Knock Subdomain Scan",
+    "language": "Python"
+  },
+  {
+    "name": "Amass",
+    "link": "https://github.com/OWASP/Amass",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "In-depth Attack Surface Mapping and Asset Discovery",
+    "language": "Go"
+  },
+  {
+    "name": "masscan",
+    "link": "https://github.com/robertdavidgraham/masscan",
+    "type": "Recon",
+    "tags": [
+      "portscan"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "TCP port scanner, spews SYN packets asynchronously, scanning entire Internet in under 5 minutes.",
+    "language": "C"
+  },
+  {
+    "name": "bbot",
+    "link": "https://github.com/blacklanternsecurity/bbot",
+    "type": "Recon",
+    "tags": [
+      "osint"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "OSINT automation for hackers",
+    "language": "Python"
+  },
+  {
+    "name": "scilla",
+    "link": "https://github.com/edoardottt/scilla",
+    "type": "Recon",
+    "tags": [
+      "subdomains",
+      "dns",
+      "port"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "🏴‍☠️ Information Gathering tool 🏴‍☠️ dns/subdomain/port enumeration",
+    "language": "Go"
+  },
+  {
+    "name": "SubBrute",
+    "link": "https://github.com/aboul3la/Sublist3r",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "https://github.com/TheRook/subbrute",
+    "language": "Python"
+  },
+  {
+    "name": "SecurityTrails",
+    "link": "https://securitytrails.com",
+    "type": "Recon",
+    "tags": [
+      "subdomains",
+      "online"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Online dns / subdomain / recon tool"
+  },
+  {
+    "name": "Lepus",
+    "link": "https://github.com/gfek/Lepus",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Subdomain finder",
+    "language": "Python"
+  },
+  {
+    "name": "lazyrecon",
+    "link": "https://github.com/nahamsec/lazyrecon",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "This script is intended to automate your reconnaissance process in an organized fashion",
+    "language": "Shell"
+  },
+  {
+    "name": "subfinder",
+    "link": "https://github.com/projectdiscovery/subfinder",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Subfinder is a subdomain discovery tool that discovers valid subdomains for websites. Designed as a passive framework to be useful for bug bounties and safe for penetration testing.",
+    "language": "Go"
+  },
+  {
+    "name": "assetfinder",
+    "link": "https://github.com/tomnomnom/assetfinder",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Find domains and subdomains related to a given domain",
+    "language": "Go"
+  },
+  {
+    "name": "urlhunter",
+    "link": "https://github.com/utkusen/urlhunter",
+    "type": "Recon",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "a recon tool that allows searching on URLs that are exposed via shortener services",
+    "language": "Go"
+  },
+  {
+    "name": "dirsearch",
+    "link": "https://github.com/maurosoria/dirsearch",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Web path scanner",
+    "language": "Python"
+  },
+  {
+    "name": "waymore",
+    "link": "https://github.com/xnl-h4ck3r/waymore",
+    "type": "Recon",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Find way more from the Wayback Machine, Common Crawl, Alien Vault OTX, URLScan, VirusTotal & Intelligence X!",
+    "language": "Python"
+  },
+  {
+    "name": "Osmedeus",
+    "link": "https://github.com/j3ssie/Osmedeus",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fully automated offensive security framework for reconnaissance and vulnerability scanning",
+    "language": "Go"
+  },
+  {
+    "name": "spiderfoot",
+    "link": "https://github.com/smicallef/spiderfoot",
+    "type": "Recon",
+    "tags": [
+      "osint"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "SpiderFoot automates OSINT collection so that you can focus on analysis.",
+    "language": "Python"
+  },
+  {
+    "name": "dnsvalidator",
+    "link": "https://github.com/vortexau/dnsvalidator",
+    "type": "Recon",
+    "tags": [
+      "dns"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Maintains a list of IPv4 DNS servers by verifying them against baseline servers, and ensuring accurate responses.",
+    "language": "Python"
+  },
+  {
+    "name": "aquatone",
+    "link": "https://github.com/michenriksen/aquatone",
+    "type": "Recon",
+    "tags": [
+      "domain"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A Tool for Domain Flyovers",
+    "language": "Go"
+  },
+  {
+    "name": "urx",
+    "link": "https://github.com/hahwul/urx",
+    "type": "Recon",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Extracts URLs from OSINT Archives for Security Insights",
+    "language": "Rust"
+  },
+  {
+    "name": "crawlergo",
+    "link": "https://github.com/Qianlitp/crawlergo",
+    "type": "Recon",
+    "tags": [
+      "crawl"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A powerful browser crawler for web vulnerability scanners",
+    "language": "Go"
+  },
+  {
+    "name": "shuffledns",
+    "link": "https://github.com/projectdiscovery/shuffledns",
+    "type": "Recon",
+    "tags": [
+      "dns"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "shuffleDNS is a wrapper around massdns written in go that allows you to enumerate valid subdomains using active bruteforce as well as resolve subdomains with wildcard handling and easy input-output support.",
+    "language": "Go"
+  },
+  {
+    "name": "subzy",
+    "link": "https://github.com/LukaSikic/subzy",
+    "type": "Recon",
+    "tags": [
+      "subdomains",
+      "takeover"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Subdomain takeover vulnerability checker",
+    "language": "Go"
+  },
+  {
+    "name": "github-endpoints",
+    "link": "https://github.com/gwen001/github-endpoints",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Find endpoints on GitHub.",
+    "language": "Go"
+  },
+  {
+    "name": "tlsx",
+    "link": "https://github.com/projectdiscovery/tlsx",
+    "type": "Recon",
+    "tags": [
+      "ssl",
+      "tls",
+      "certificates"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fast and configurable TLS grabber focused on TLS based data collection",
+    "language": "Go"
+  },
+  {
+    "name": "waybackurls",
+    "link": "https://github.com/tomnomnom/waybackurls",
+    "type": "Recon",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fetch all the URLs that the Wayback Machine knows about for a domain",
+    "language": "Go"
+  },
+  {
+    "name": "SecretFinder",
+    "link": "https://github.com/m4ll0k/SecretFinder",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "SecretFinder - A python script for find sensitive data (apikeys, accesstoken,jwt,..) and search anything on javascript files",
+    "language": "Python"
+  },
+  {
+    "name": "longtongue",
+    "link": "https://github.com/edoardottt/longtongue",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Customized Password/Passphrase List inputting Target Info",
+    "language": "Python"
+  },
+  {
+    "name": "3klCon",
+    "link": "https://github.com/eslam3kl/3klCon",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Automation Recon tool which works with Large & Medium scopes. It performs more than 20 tasks and gets back all the results in separated files.",
+    "language": "Python"
+  },
+  {
+    "name": "pagodo",
+    "link": "https://github.com/opsdisk/pagodo",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "pagodo (Passive Google Dork) - Automate Google Hacking Database scraping and searching",
+    "language": "Python"
+  },
+  {
+    "name": "BLUTO",
+    "link": "https://github.com/darryllane/Bluto",
+    "type": "Recon",
+    "tags": [
+      "dns"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "DNS Analysis Tool",
+    "language": "Python"
+  },
+  {
+    "name": "github-subdomains",
+    "link": "https://github.com/gwen001/github-subdomains",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Find subdomains on GitHub",
+    "language": "Go"
+  },
+  {
+    "name": "meg",
+    "link": "https://github.com/tomnomnom/meg",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fetch many paths for many hosts - without killing the hosts",
+    "language": "Go"
+  },
+  {
+    "name": "STEWS",
+    "link": "https://github.com/PalindromeLabs/STEWS",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A Security Tool for Enumerating WebSockets",
+    "language": "Python"
+  },
+  {
+    "name": "zdns",
+    "link": "https://github.com/zmap/zdns",
+    "type": "Recon",
+    "tags": [
+      "dns"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fast CLI DNS Lookup Tool",
+    "language": "Go"
+  },
+  {
+    "name": "favirecon",
+    "link": "https://github.com/edoardottt/favirecon",
+    "type": "Recon",
+    "tags": [
+      "favicon"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Use favicon.ico to improve your target recon phase. Quickly detect technologies, WAF, exposed panels, known services.",
+    "language": "Go"
+  },
+  {
+    "name": "Sub404",
+    "link": "https://github.com/r3curs1v3-pr0xy/sub404",
+    "type": "Recon",
+    "tags": [
+      "subdomains",
+      "takeover"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A python tool to check subdomain takeover vulnerability",
+    "language": "Go"
+  },
+  {
+    "name": "ParamSpider",
+    "link": "https://github.com/devanshbatham/ParamSpider",
+    "type": "Recon",
+    "tags": [
+      "param"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Mining parameters from dark corners of Web Archives",
+    "language": "Python"
+  },
+  {
+    "name": "OneForAll",
+    "link": "https://github.com/shmilylty/OneForAll",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "OneForAll是一款功能强大的子域收集工具",
+    "language": "Python"
+  },
+  {
+    "name": "Photon",
+    "link": "https://github.com/s0md3v/Photon",
+    "type": "Recon",
+    "tags": [
+      "osint",
+      "crawl"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Incredibly fast crawler designed for OSINT.",
+    "language": "Python"
+  },
+  {
+    "name": "HydraRecon",
+    "link": "https://github.com/aufzayed/HydraRecon",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "All In One, Fast, Easy Recon Tool",
+    "language": "Python"
+  },
+  {
+    "name": "csprecon",
+    "link": "https://github.com/edoardottt/csprecon",
+    "type": "Recon",
+    "tags": [
+      "csp"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Discover new target domains using Content Security Policy",
+    "language": "Go"
+  },
+  {
+    "name": "Sublist3r",
+    "link": "https://github.com/aboul3la/Sublist3r",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fast subdomains enumeration tool for penetration testers",
+    "language": "Python"
+  },
+  {
+    "name": "katana",
+    "link": "https://github.com/projectdiscovery/katana",
+    "type": "Recon",
+    "tags": [
+      "crawl"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A next-generation crawling and spidering framework.",
+    "language": "Go"
+  },
+  {
+    "name": "Silver",
+    "link": "https://github.com/s0md3v/Silver",
+    "type": "Recon",
+    "tags": [
+      "port"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Mass scan IPs for vulnerable services",
+    "language": "Python"
+  },
+  {
+    "name": "cc.py",
+    "link": "https://github.com/si9int/cc.py",
+    "type": "Recon",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Extracting URLs of a specific target based on the results of \"commoncrawl.org\"",
+    "language": "Python"
+  },
+  {
+    "name": "altdns",
+    "link": "https://github.com/infosec-au/altdns",
+    "type": "Recon",
+    "tags": [
+      "dns",
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Generates permutations, alterations and mutations of subdomains and then resolves them",
+    "language": "Python"
+  },
+  {
+    "name": "noir",
+    "link": "https://github.com/noir-cr/noir",
+    "type": "Recon",
+    "tags": [
+      "endpoint",
+      "url",
+      "attack-surface"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "sourceSection": "Tools",
+    "description": "Attack surface detector that identifies endpoints by static analysis",
+    "language": "Crystal"
+  },
+  {
+    "name": "subjack",
+    "link": "https://github.com/haccer/subjack",
+    "type": "Recon",
+    "tags": [
+      "subdomains",
+      "takeover"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Subdomain Takeover tool written in Go",
+    "language": "Go"
+  },
+  {
+    "name": "apkleaks",
+    "link": "https://github.com/dwisiswant0/apkleaks",
+    "type": "Recon",
+    "tags": [
+      "apk",
+      "url",
+      "endpoint"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Scanning APK file for URIs, endpoints & secrets.",
+    "language": "Python"
+  },
+  {
+    "name": "xnLinkFinder",
+    "link": "https://github.com/xnl-h4ck3r/xnLinkFinder",
+    "type": "Recon",
+    "tags": [
+      "js-analysis"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A python tool used to discover endpoints (and potential parameters) for a given target",
+    "language": "Python"
+  },
+  {
+    "name": "naabu",
+    "link": "https://github.com/projectdiscovery/naabu",
+    "type": "Recon",
+    "tags": [
+      "portscan"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A fast port scanner written in go with focus on reliability and simplicity. Designed to be used in combination with other tools for attack surface discovery in bug bounties and pentests",
+    "language": "Go"
+  },
+  {
+    "name": "reconftw",
+    "link": "https://github.com/six2dez/reconftw",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "reconFTW is a tool designed to perform automated recon on a target domain by running the best set of tools to perform scanning and finding out vulnerabilities",
+    "language": "Shell"
+  },
+  {
+    "name": "graphw00f",
+    "link": "https://github.com/dolevf/graphw00f",
+    "type": "Recon",
+    "tags": [
+      "graphql"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "GraphQL Server Engine Fingerprinting utility",
+    "language": "Python"
+  },
+  {
+    "name": "gospider",
+    "link": "https://github.com/jaeles-project/gospider",
+    "type": "Recon",
+    "tags": [
+      "crawl"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Gospider - Fast web spider written in Go",
+    "language": "Go"
+  },
+  {
+    "name": "findomain",
+    "link": "https://github.com/Edu4rdSHL/findomain",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "The fastest and cross-platform subdomain enumerator, do not waste your time.",
+    "language": "Rust"
+  },
+  {
+    "name": "Shodan",
+    "link": "https://www.shodan.io/",
+    "type": "Recon",
+    "tags": [
+      "osint"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "World's first search engine for Internet-connected devices"
+  },
+  {
+    "name": "uncover",
+    "link": "https://github.com/projectdiscovery/uncover",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Quickly discover exposed hosts on the internet using multiple search engine.",
+    "language": "Go"
+  },
+  {
+    "name": "parameth",
+    "link": "https://github.com/maK-/parameth",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "This tool can be used to brute discover GET and POST parameters",
+    "language": "Python"
+  },
+  {
+    "name": "fhc",
+    "link": "https://github.com/Edu4rdSHL/fhc",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fast HTTP Checker.",
+    "language": "Rust"
+  },
+  {
+    "name": "Smap",
+    "link": "https://github.com/s0md3v/smap/",
+    "type": "Recon",
+    "tags": [
+      "port"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "a drop-in replacement for Nmap powered by shodan.io",
+    "language": "Go"
+  },
+  {
+    "name": "puredns",
+    "link": "https://github.com/d3mondev/puredns",
+    "type": "Recon",
+    "tags": [
+      "subdomains",
+      "dns"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Puredns is a fast domain resolver and subdomain bruteforcing tool that can accurately filter out wildcard subdomains and DNS poisoned entries.",
+    "language": "Go"
+  },
+  {
+    "name": "subjs",
+    "link": "https://github.com/lc/subjs",
+    "type": "Recon",
+    "tags": [
+      "url",
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fetches javascript file from a list of URLS or subdomains.",
+    "language": "Go"
+  },
+  {
+    "name": "RustScan",
+    "link": "https://github.com/brandonskerritt/RustScan",
+    "type": "Recon",
+    "tags": [
+      "portscan"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Faster Nmap Scanning with Rust",
+    "language": "Rust"
+  },
+  {
+    "name": "dnsprobe",
+    "link": "https://github.com/projectdiscovery/dnsprobe",
+    "type": "Recon",
+    "tags": [
+      "dns"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "DNSProb (beta) is a tool built on top of retryabledns that allows you to perform multiple dns queries of your choice with a list of user supplied resolvers.",
+    "language": "Go"
+  },
+  {
+    "name": "LinkFinder",
+    "link": "https://github.com/GerbenJavado/LinkFinder",
+    "type": "Recon",
+    "tags": [
+      "js-analysis"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A python script that finds endpoints in JavaScript files",
+    "language": "Python"
+  },
+  {
+    "name": "gauplus",
+    "link": "https://github.com/bp0lr/gauplus",
+    "type": "Recon",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A modified version of gau for personal usage. Support workers, proxies and some extra things.",
+    "language": "Go"
+  },
+  {
+    "name": "subs_all",
+    "link": "https://github.com/emadshanab/subs_all",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Subdomain Enumeration Wordlist. 8956437 unique words. Updated."
+  },
+  {
+    "name": "HostHunter",
+    "link": "https://github.com/SpiderLabs/HostHunter",
+    "type": "Recon",
+    "tags": [
+      "osint"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Recon tool for discovering hostnames using OSINT techniques.",
+    "language": "Python"
+  },
+  {
+    "name": "DNSDumpster",
+    "link": "https://dnsdumpster.com",
+    "type": "Recon",
+    "tags": [
+      "dns",
+      "online"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Online dns recon & research, find & lookup dns records"
+  },
+  {
+    "name": "htcat",
+    "link": "https://github.com/htcat/htcat",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Parallel and Pipelined HTTP GET Utility",
+    "language": "Go"
+  },
+  {
+    "name": "SubOver",
+    "link": "https://github.com/Ice3man543/SubOver",
+    "type": "Recon",
+    "tags": [
+      "subdomains",
+      "takeover"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A Powerful Subdomain Takeover Tool",
+    "language": "Go"
+  },
+  {
+    "name": "sn0int",
+    "link": "https://github.com/kpcyrd/sn0int",
+    "type": "Recon",
+    "tags": [
+      "osint"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Semi-automatic OSINT framework and package manager",
+    "language": "Rust"
+  },
+  {
+    "name": "Parth",
+    "link": "https://github.com/s0md3v/Parth",
+    "type": "Recon",
+    "tags": [
+      "param"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Heuristic Vulnerable Parameter Scanner",
+    "language": "Python"
+  },
+  {
+    "name": "cloudlist",
+    "link": "https://github.com/projectdiscovery/cloudlist",
+    "type": "Recon",
+    "tags": [
+      "cloud",
+      "asset-discovery"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Cloudlist is a tool for listing Assets from multiple Cloud Providers",
+    "language": "Go"
+  },
+  {
+    "name": "subgen",
+    "link": "https://github.com/pry0cc/subgen",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A really simple utility to concate wordlists to a domain name - to pipe into your favourite resolver!",
+    "language": "Go"
+  },
+  {
+    "name": "go-dork",
+    "link": "https://github.com/dwisiswant0/go-dork",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "The fastest dork scanner written in Go.",
+    "language": "Go"
+  },
+  {
+    "name": "asnmap",
+    "link": "https://github.com/projectdiscovery/asnmap",
+    "type": "Recon",
+    "tags": [
+      "asn",
+      "network-mapping"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Go CLI and Library for quickly mapping organization network ranges using ASN information",
+    "language": "Go"
+  },
+  {
+    "name": "Hunt3r",
+    "link": "https://github.com/EasyRecon/Hunt3r",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Made your bugbounty subdomains reconnaissance easier with Hunt3r the web application reconnaissance framework",
+    "language": "Ruby"
+  },
+  {
+    "name": "JSFScan.sh",
+    "link": "https://github.com/KathanP19/JSFScan.sh",
+    "type": "Recon",
+    "tags": [
+      "js-analysis"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Automation for javascript recon in bug bounty.",
+    "language": "Shell"
+  },
+  {
+    "name": "recon_profile",
+    "link": "https://github.com/nahamsec/recon_profile",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Recon profile (bash profile) for bugbounty",
+    "language": "Shell"
+  },
+  {
+    "name": "BugBountyScanner",
+    "link": "https://github.com/chvancooten/BugBountyScanner",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A Bash script and Docker image for Bug Bounty reconnaissance.",
+    "language": "Shell"
+  },
+  {
+    "name": "gau",
+    "link": "https://github.com/lc/gau",
+    "type": "Recon",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fetch known URLs from AlienVault's Open Threat Exchange, the Wayback Machine, and Common Crawl.",
+    "language": "Go"
+  },
+  {
+    "name": "x8",
+    "link": "https://github.com/Sh1Yo/x8",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Hidden parameters discovery suite",
+    "language": "Rust"
+  },
+  {
+    "name": "CT_subdomains",
+    "link": "https://github.com/internetwache/CT_subdomains",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "An hourly updated list of subdomains gathered from certificate transparency logs"
+  },
+  {
+    "name": "jsluice",
+    "link": "https://github.com/BishopFox/jsluice",
+    "type": "Recon",
+    "tags": [
+      "js-analysis"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Extract URLs, paths, secrets, and other interesting bits from JavaScript",
+    "language": "Go"
+  },
+  {
+    "name": "dmut",
+    "link": "https://github.com/bp0lr/dmut",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A tool to perform permutations, mutations and alteration of subdomains in golang.",
+    "language": "Go"
+  },
+  {
+    "name": "hakrevdns",
+    "link": "https://github.com/hakluke/hakrevdns",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Small, fast tool for performing reverse DNS lookups en masse.",
+    "language": "Go"
+  },
+  {
+    "name": "Chaos Web",
+    "link": "https://chaos.projectdiscovery.io",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "actively scan and maintain internet-wide assets' data. enhance research and analyse changes around DNS for better insights."
+  },
+  {
+    "name": "uro",
+    "link": "https://github.com/s0md3v/uro",
+    "type": "Recon",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "declutters url lists for crawling/pentesting",
+    "language": "Python"
+  },
+  {
+    "name": "xurlfind3r",
+    "link": "https://github.com/hueristiq/xurlfind3r",
+    "type": "Recon",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A command-line utility designed to discover URLs for a given domain in a simple, efficient way.",
+    "language": "Go"
+  },
+  {
+    "name": "megplus",
+    "link": "https://github.com/EdOverflow/megplus",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Automated reconnaissance wrapper — TomNomNom's meg on steroids. [DEPRECATED]",
+    "language": "Shell"
+  },
+  {
+    "name": "rusolver",
+    "link": "https://github.com/Edu4rdSHL/rusolver",
+    "type": "Recon",
+    "tags": [
+      "dns"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fast and accurate DNS resolver.",
+    "language": "Rust"
+  },
+  {
+    "name": "dnsx",
+    "link": "https://github.com/projectdiscovery/dnsx",
+    "type": "Recon",
+    "tags": [
+      "dns"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "dnsx is a fast and multi-purpose DNS toolkit allow to run multiple DNS queries of your choice with a list of user-supplied resolvers.",
+    "language": "Go"
+  },
+  {
+    "name": "rengine",
+    "link": "https://github.com/yogeshojha/rengine",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "reNgine is an automated reconnaissance framework meant for gathering information during penetration testing of web applications. reNgine has customizable scan engines, which can be used to scan the websites, endpoints, and gather information.",
+    "language": "JavaScript"
+  },
+  {
+    "name": "Sudomy",
+    "link": "https://github.com/screetsec/Sudomy",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "subdomain enumeration tool to collect subdomains and analyzing domains",
+    "language": "Shell"
+  },
+  {
+    "name": "cariddi",
+    "link": "https://github.com/edoardottt/cariddi",
+    "type": "Recon",
+    "tags": [
+      "crawl"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Take a list of domains, crawl urls and scan for endpoints, secrets, api keys, file extensions, tokens and more",
+    "language": "Go"
+  },
+  {
+    "name": "GitMiner",
+    "link": "https://github.com/UnkL4b/GitMiner",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Tool for advanced mining for content on Github",
+    "language": "Python"
+  },
+  {
+    "name": "haktrails",
+    "link": "https://github.com/hakluke/haktrails",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Golang client for querying SecurityTrails API data",
+    "language": "Go"
+  },
+  {
+    "name": "getJS",
+    "link": "https://github.com/003random/getJS",
+    "type": "Recon",
+    "tags": [
+      "js-analysis"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A tool to fastly get all javascript sources/files",
+    "language": "Go"
+  },
+  {
+    "name": "ParamWizard",
+    "link": "https://github.com/iamunixtz/ParamWizard",
+    "type": "Recon",
+    "tags": [
+      "param"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "ParamWizard is a powerful Python-based tool designed for extracting and identifying URLs with parameters from a specified website.",
+    "language": "Python"
+  },
+  {
+    "name": "Arjun",
+    "link": "https://github.com/s0md3v/Arjun",
+    "type": "Recon",
+    "tags": [
+      "param"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "HTTP parameter discovery suite.",
+    "language": "Python"
+  },
+  {
+    "name": "httpx",
+    "link": "https://github.com/projectdiscovery/httpx",
+    "type": "Recon",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "httpx is a fast and multi-purpose HTTP toolkit allow to run multiple probers using retryablehttp library, it is designed to maintain the result reliability with increased threads.",
+    "language": "Go"
+  },
+  {
+    "name": "chaos-client",
+    "link": "https://github.com/projectdiscovery/chaos-client",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Go client to communicate with Chaos DNS API.",
+    "language": "Go"
+  },
+  {
+    "name": "hakrawler",
+    "link": "https://github.com/hakluke/hakrawler",
+    "type": "Recon",
+    "tags": [
+      "crawl"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Simple, fast web crawler designed for easy, quick discovery of endpoints and assets within a web application",
+    "language": "Go"
+  },
+  {
+    "name": "alterx",
+    "link": "https://github.com/projectdiscovery/alterx",
+    "type": "Recon",
+    "tags": [
+      "subdomains",
+      "wordlist",
+      "permutation"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fast and customizable subdomain wordlist generator using DSL",
+    "language": "Go"
+  },
+  {
+    "name": "shosubgo",
+    "link": "https://github.com/incogbyte/shosubgo",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Small tool to Grab subdomains using Shodan api.",
+    "language": "Go"
+  },
+  {
+    "name": "gowitness",
+    "link": "https://github.com/sensepost/gowitness",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "🔍 gowitness - a golang, web screenshot utility using Chrome Headless",
+    "language": "Go"
+  },
+  {
+    "name": "gobuster",
+    "link": "https://github.com/OJ/gobuster",
+    "type": "Recon",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Directory/File, DNS and VHost busting tool written in Go",
+    "language": "Go"
+  },
+  {
+    "name": "CrackQL",
+    "link": "https://github.com/nicholasaleks/CrackQL",
+    "type": "Fuzzer",
+    "tags": [
+      "graphql"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "CrackQL is a GraphQL password brute-force and fuzzing utility.",
+    "language": "Python"
+  },
+  {
+    "name": "c-jwt-cracker",
+    "link": "https://github.com/brendan-rius/c-jwt-cracker",
+    "type": "Fuzzer",
+    "tags": [
+      "jwt"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "JWT brute force cracker written in C",
+    "language": "C"
+  },
+  {
+    "name": "Clairvoyance",
+    "link": "https://github.com/nikitastupin/clairvoyance",
+    "type": "Fuzzer",
+    "tags": [
+      "graphql"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Obtain GraphQL API schema even if the introspection is disabled",
+    "language": "Python"
+  },
+  {
+    "name": "wfuzz",
+    "link": "https://github.com/xmendez/wfuzz",
+    "type": "Fuzzer",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Web application fuzzer",
+    "language": "Python"
+  },
+  {
+    "name": "dotdotpwn",
+    "link": "https://github.com/wireghoul/dotdotpwn",
+    "type": "Fuzzer",
+    "tags": [
+      "path-traversal"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "DotDotPwn - The Directory Traversal Fuzzer",
+    "language": "Perl"
+  },
+  {
+    "name": "ParamPamPam",
+    "link": "https://github.com/Bo0oM/ParamPamPam",
+    "type": "Fuzzer",
+    "tags": [
+      "param",
+      "cache-vuln"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "This tool for brute discover GET and POST parameters.",
+    "language": "Python"
+  },
+  {
+    "name": "ppfuzz",
+    "link": "https://github.com/dwisiswant0/ppfuzz",
+    "type": "Fuzzer",
+    "tags": [
+      "prototypepollution",
+      "prototype-pollution"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A fast tool to scan client-side prototype pollution vulnerability written in Rust. 🦀",
+    "language": "Rust"
+  },
+  {
+    "name": "hashcat",
+    "link": "https://github.com/hashcat/hashcat/",
+    "type": "Fuzzer",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "World's fastest and most advanced password recovery utility",
+    "language": "C"
+  },
+  {
+    "name": "kiterunner",
+    "link": "https://github.com/assetnote/kiterunner",
+    "type": "Fuzzer",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Contextual Content Discovery Tool",
+    "language": "Go"
+  },
+  {
+    "name": "headerpwn",
+    "link": "https://github.com/devanshbatham/headerpwn",
+    "type": "Fuzzer",
+    "tags": [
+      "header"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A fuzzer for finding anomalies and analyzing how servers respond to different HTTP headers",
+    "language": "Go"
+  },
+  {
+    "name": "SmuggleFuzz",
+    "link": "https://github.com/Moopinger/smugglefuzz/",
+    "type": "Fuzzer",
+    "tags": [
+      "smuggle",
+      "fuzz"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A rapid HTTP downgrade smuggling scanner written in Go.",
+    "language": "Go"
+  },
+  {
+    "name": "thc-hydra",
+    "link": "https://github.com/vanhauser-thc/thc-hydra",
+    "type": "Fuzzer",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "hydra",
+    "language": "C"
+  },
+  {
+    "name": "fuzzparam",
+    "link": "https://github.com/0xsapra/fuzzparam",
+    "type": "Fuzzer",
+    "tags": [
+      "param"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A fast go based param miner to fuzz possible parameters a URL can have.",
+    "language": "Go"
+  },
+  {
+    "name": "BruteX",
+    "link": "https://github.com/1N3/BruteX",
+    "type": "Fuzzer",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Automatically brute force all services running on a target.",
+    "language": "Shell"
+  },
+  {
+    "name": "BatchQL",
+    "link": "https://github.com/assetnote/batchql",
+    "type": "Fuzzer",
+    "tags": [
+      "graphql"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "GraphQL security auditing script with a focus on performing batch GraphQL queries and mutations",
+    "language": "Python"
+  },
+  {
+    "name": "jwt-hack",
+    "link": "https://github.com/hahwul/jwt-hack",
+    "type": "Fuzzer",
+    "tags": [
+      "jwt"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "🔩 jwt-hack is tool for hacking / security testing to JWT. Supported for En/decoding JWT, Generate payload for JWT attack and very fast cracking(dict/brutefoce)",
+    "language": "Go"
+  },
+  {
+    "name": "medusa",
+    "link": "https://github.com/riza/medusa",
+    "type": "Fuzzer",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fastest recursive HTTP fuzzer, like a Ferrari.",
+    "language": "Go"
+  },
+  {
+    "name": "jwt-cracker",
+    "link": "https://github.com/lmammino/jwt-cracker",
+    "type": "Fuzzer",
+    "tags": [
+      "jwt"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Simple HS256 JWT token brute force cracker",
+    "language": "JavaScript"
+  },
+  {
+    "name": "SSRFmap",
+    "link": "https://github.com/swisskyrepo/SSRFmap",
+    "type": "Fuzzer",
+    "tags": [
+      "ssrf"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Automatic SSRF fuzzer and exploitation tool",
+    "language": "Python"
+  },
+  {
+    "name": "crlfuzz",
+    "link": "https://github.com/dwisiswant0/crlfuzz",
+    "type": "Fuzzer",
+    "tags": [
+      "crlf"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A fast tool to scan CRLF vulnerability written in Go",
+    "language": "Shell"
+  },
+  {
+    "name": "SSTImap",
+    "link": "https://github.com/vladko312/SSTImap",
+    "type": "Fuzzer",
+    "tags": [
+      "ssti"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Automatic SSTI detection tool with interactive interface",
+    "language": "Python"
+  },
+  {
+    "name": "feroxbuster",
+    "link": "https://github.com/epi052/feroxbuster",
+    "type": "Fuzzer",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A fast, simple, recursive content discovery tool written in Rust.",
+    "language": "Rust"
+  },
+  {
+    "name": "GraphQLmap",
+    "link": "https://github.com/swisskyrepo/GraphQLmap",
+    "type": "Fuzzer",
+    "tags": [
+      "graphql"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "GraphQLmap is a scripting engine to interact with a graphql endpoint for pentesting purposes.",
+    "language": "Python"
+  },
+  {
+    "name": "SSRFire",
+    "link": "https://github.com/ksharinarayanan/SSRFire",
+    "type": "Fuzzer",
+    "tags": [
+      "ssrf"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "sourceSection": "Tools",
+    "description": "An automated SSRF finder. Just give the domain name and your server and chill",
+    "language": "Shell"
+  },
+  {
+    "name": "ffuf",
+    "link": "https://github.com/ffuf/ffuf",
+    "type": "Fuzzer",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fast web fuzzer written in Go",
+    "language": "Go"
+  },
+  {
+    "name": "LFISuite",
+    "link": "https://github.com/D35m0nd142/LFISuite",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Totally Automatic LFI Exploiter (+ Reverse Shell) and Scanner",
+    "language": "Python"
+  },
+  {
+    "name": "depenfusion",
+    "link": "https://github.com/benjamin-mauss/depenfusion",
+    "type": "Scanner",
+    "tags": [
+      "dependency-confusion"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A powerful pentesting tool for detecting and exploiting dependency confusion vulnerabilities in Node.js projects",
+    "language": "Python"
+  },
+  {
+    "name": "nosqli",
+    "link": "https://github.com/Charlie-belmer/nosqli",
+    "type": "Scanner",
+    "tags": [
+      "nosqli"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "NoSql Injection CLI tool",
+    "language": "Go"
+  },
+  {
+    "name": "DirDar",
+    "link": "https://github.com/M4DM0e/DirDar",
+    "type": "Scanner",
+    "tags": [
+      "403"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "DirDar is a tool that searches for (403-Forbidden) directories to break it and get dir listing on it",
+    "language": "Go"
+  },
+  {
+    "name": "gitGraber",
+    "link": "https://github.com/hisxo/gitGraber",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "gitGraber",
+    "language": "Python"
+  },
+  {
+    "name": "PPScan",
+    "link": "https://github.com/msrkp/PPScan",
+    "type": "Scanner",
+    "tags": [
+      "prototypepollution",
+      "prototype-pollution"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Client Side Prototype Pollution Scanner",
+    "language": "JavaScript"
+  },
+  {
+    "name": "a2sv",
+    "link": "https://github.com/hahwul/a2sv",
+    "type": "Scanner",
+    "tags": [
+      "ssl"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Auto Scanning to SSL Vulnerability",
+    "language": "Python"
+  },
+  {
+    "name": "findom-xss",
+    "link": "https://github.com/dwisiswant0/findom-xss",
+    "type": "Scanner",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A fast DOM based XSS vulnerability scanner with simplicity.",
+    "language": "Shell"
+  },
+  {
+    "name": "httprobe",
+    "link": "https://github.com/tomnomnom/httprobe",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Take a list of domains and probe for working HTTP and HTTPS servers",
+    "language": "Go"
+  },
+  {
+    "name": "LOXS",
+    "link": "https://github.com/coffinxp/loxs",
+    "type": "Scanner",
+    "tags": [
+      "xss",
+      "sqli",
+      "crlf",
+      "lfi",
+      "open-redirect"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "best tool for finding SQLi,CRLF,XSS,LFi,OpenRedirect",
+    "language": "Python"
+  },
+  {
+    "name": "ppmap",
+    "link": "https://github.com/kleiton0x00/ppmap",
+    "type": "Scanner",
+    "tags": [
+      "prototypepollution",
+      "prototype-pollution"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A scanner/exploitation tool written in GO, which leverages client-side Prototype Pollution to XSS by exploiting known gadgets.",
+    "language": "Go"
+  },
+  {
+    "name": "wprecon",
+    "link": "https://github.com/blackcrw/wprecon",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Hello! Welcome. Wprecon (Wordpress Recon), is a vulnerability recognition tool in CMS Wordpress, 100% developed in Go.",
+    "language": "Go"
+  },
+  {
+    "name": "dependency-confusion-scanner",
+    "link": "https://github.com/Yaniv-git/dependency-confusion-scanner",
+    "type": "Scanner",
+    "tags": [
+      "dependency-confusion"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "This small repo is meant to scan Github's repositories for potential Dependency confusion vulnerabilities.",
+    "language": "Python"
+  },
+  {
+    "name": "Deadsniper",
+    "link": "https://github.com/port19x/deadsniper",
+    "type": "Scanner",
+    "tags": [
+      "broken-link"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A fast, specialized dead-link checker",
+    "language": "Go"
+  },
+  {
+    "name": "DeepViolet",
+    "link": "https://github.com/spoofzu/DeepViolet",
+    "type": "Scanner",
+    "tags": [
+      "ssl"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Tool for introspection of SSL\\TLS sessions",
+    "language": "Java"
+  },
+  {
+    "name": "Oralyzer",
+    "link": "https://github.com/r0075h3ll/Oralyzer",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Open Redirection Analyzer",
+    "language": "Python"
+  },
+  {
+    "name": "zap-cli",
+    "link": "https://github.com/Grunny/zap-cli",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "zap"
+    ],
+    "sourceSection": "Tools",
+    "description": "A simple tool for interacting with OWASP ZAP from the commandline.",
+    "language": "Python"
+  },
+  {
+    "name": "hinject",
+    "link": "https://github.com/dwisiswant0/hinject",
+    "type": "Scanner",
+    "tags": [
+      "header"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Host Header Injection Checker",
+    "language": "Go"
+  },
+  {
+    "name": "dalfox",
+    "link": "https://github.com/hahwul/dalfox",
+    "type": "Scanner",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "🌘🦊 Dalfox is a powerful open-source XSS scanner and utility focused on automation.",
+    "language": "Go"
+  },
+  {
+    "name": "XSpear",
+    "link": "https://github.com/hahwul/XSpear",
+    "type": "Scanner",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Powerfull XSS Scanning and Parameter analysis tool&gem",
+    "language": "Ruby"
+  },
+  {
+    "name": "wapiti",
+    "link": "https://github.com/wapiti-scanner/wapiti",
+    "type": "Scanner",
+    "tags": [
+      "vulnerability-scanner",
+      "web-scanner"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Web application vulnerability scanner. Wapiti allows you to audit the security of your websites or web applications.",
+    "language": "Python"
+  },
+  {
+    "name": "semgrep",
+    "link": "https://github.com/semgrep/semgrep",
+    "type": "Scanner",
+    "tags": [
+      "sast",
+      "code-analysis"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Lightweight static analysis for many languages. Find bug variants with patterns that look like source code.",
+    "language": "Python"
+  },
+  {
+    "name": "http2smugl",
+    "link": "https://github.com/neex/http2smugl",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "This tool helps to detect and exploit HTTP request smuggling in cases it can be achieved via HTTP/2 -> HTTP/1.1 conversion by the frontend server.",
+    "language": "Go"
+  },
+  {
+    "name": "ssrf-sheriff",
+    "link": "https://github.com/teknogeek/ssrf-sheriff",
+    "type": "Scanner",
+    "tags": [
+      "ssrf"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A simple SSRF-testing sheriff written in Go",
+    "language": "Go"
+  },
+  {
+    "name": "xsinator.com",
+    "link": "https://github.com/RUB-NDS/xsinator.com",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "XS-Leak Browser Test Suite",
+    "language": "JavaScript"
+  },
+  {
+    "name": "VHostScan",
+    "link": "https://github.com/codingo/VHostScan",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A virtual host scanner that performs reverse lookups, can be used with pivot tools, detect catch-all scenarios, work around wildcards, aliases and dynamic default pages.",
+    "language": "Python"
+  },
+  {
+    "name": "pphack",
+    "link": "https://github.com/edoardottt/pphack",
+    "type": "Scanner",
+    "tags": [
+      "prototypepollution",
+      "prototype-pollution"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "The Most Advanced Client-Side Prototype Pollution Scanner",
+    "language": "Go"
+  },
+  {
+    "name": "autopoisoner",
+    "link": "https://github.com/Th0h0/autopoisoner",
+    "type": "Scanner",
+    "tags": [
+      "cache-vuln"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Web cache poisoning vulnerability scanner.",
+    "language": "Python"
+  },
+  {
+    "name": "websocket-connection-smuggler",
+    "link": "https://github.com/hahwul/websocket-connection-smuggler",
+    "type": "Scanner",
+    "tags": [
+      "smuggle"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "websocket-connection-smuggler",
+    "language": "Go"
+  },
+  {
+    "name": "testssl.sh",
+    "link": "https://github.com/drwetter/testssl.sh",
+    "type": "Scanner",
+    "tags": [
+      "ssl"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Testing TLS/SSL encryption anywhere on any port",
+    "language": "Shell"
+  },
+  {
+    "name": "scan4all",
+    "link": "https://github.com/hktalent/scan4all",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Official repository vuls Scan",
+    "language": "Go"
+  },
+  {
+    "name": "xsscrapy",
+    "link": "https://github.com/DanMcInerney/xsscrapy",
+    "type": "Scanner",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "XSS/SQLi spider. Give it a URL and it'll test every link it finds for XSS and some SQLi.",
+    "language": "Python"
+  },
+  {
+    "name": "ws-smuggler",
+    "link": "https://github.com/hahwul/ws-smuggler",
+    "type": "Scanner",
+    "tags": [
+      "smuggle"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "WebSocket Connection Smuggler",
+    "language": "Go"
+  },
+  {
+    "name": "gitleaks",
+    "link": "https://github.com/zricethezav/gitleaks",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Scan git repos (or files) for secrets using regex and entropy 🔑",
+    "language": "Go"
+  },
+  {
+    "name": "PwnXSS",
+    "link": "https://github.com/pwn0sec/PwnXSS",
+    "type": "Scanner",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Vulnerability (XSS) scanner exploit",
+    "language": "Python"
+  },
+  {
+    "name": "sqlmap",
+    "link": "https://github.com/sqlmapproject/sqlmap",
+    "type": "Scanner",
+    "tags": [
+      "sqli"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Automatic SQL injection and database takeover tool",
+    "language": "Python"
+  },
+  {
+    "name": "Web-Cache-Vulnerability-Scanner",
+    "link": "https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner",
+    "type": "Scanner",
+    "tags": [
+      "cache-vuln"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Web Cache Vulnerability Scanner is a Go-based CLI tool for testing for web cache poisoning. It is developed by Hackmanit GmbH (http://hackmanit.de/).",
+    "language": "Go"
+  },
+  {
+    "name": "S3Scanner",
+    "link": "https://github.com/sa7mon/S3Scanner",
+    "type": "Scanner",
+    "tags": [
+      "s3"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Scan for open AWS S3 buckets and dump the contents",
+    "language": "Python"
+  },
+  {
+    "name": "FockCache",
+    "link": "https://github.com/tismayil/fockcache",
+    "type": "Scanner",
+    "tags": [
+      "cache-vuln"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Minimalized Test Cache Poisoning",
+    "language": "Go"
+  },
+  {
+    "name": "XSStrike",
+    "link": "https://github.com/s0md3v/XSStrike",
+    "type": "Scanner",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Most advanced XSS scanner.",
+    "language": "Python"
+  },
+  {
+    "name": "xsser",
+    "link": "https://github.com/epsylon/xsser",
+    "type": "Scanner",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Cross Site \"Scripter\" (aka XSSer) is an automatic -framework- to detect, exploit and report XSS vulnerabilities in web-based applications.",
+    "language": "Python"
+  },
+  {
+    "name": "XssPy",
+    "link": "https://github.com/faizann24/",
+    "type": "Scanner",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Web Application XSS Scanner",
+    "language": "Python"
+  },
+  {
+    "name": "ditto",
+    "link": "https://github.com/evilsocket/ditto",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A tool for IDN homograph attacks and detection.",
+    "language": "Go"
+  },
+  {
+    "name": "CMSmap",
+    "link": "https://github.com/dionach/CMSmap",
+    "type": "Scanner",
+    "tags": [
+      "web-scanner",
+      "vulnerability-scanner"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "CMSmap is a python open source CMS scanner that automates the process of detecting security flaws of the most popular CMSs.",
+    "language": "Python"
+  },
+  {
+    "name": "osv-scanner",
+    "link": "https://github.com/google/osv-scanner",
+    "type": "Scanner",
+    "tags": [
+      "vulnerability-scanner",
+      "dependency-scanning"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Vulnerability scanner which uses the OSV database to find vulnerabilities in open source projects",
+    "language": "Go"
+  },
+  {
+    "name": "DOMPurify",
+    "link": "https://github.com/cure53/DOMPurify",
+    "type": "Scanner",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "DOMPurify - a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. DOMPurify works with a secure default, but offers a lot of configurability and hooks. Demo:",
+    "language": "JavaScript"
+  },
+  {
+    "name": "nikto",
+    "link": "https://github.com/sullo/nikto",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Nikto web server scanner",
+    "language": "Perl"
+  },
+  {
+    "name": "sqliv",
+    "link": "https://github.com/the-robot/sqliv",
+    "type": "Scanner",
+    "tags": [
+      "sqli"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "massive SQL injection vulnerability scanner",
+    "language": "Python"
+  },
+  {
+    "name": "smuggler",
+    "link": "https://github.com/defparam/smuggler",
+    "type": "Scanner",
+    "tags": [
+      "smuggle"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Smuggler - An HTTP Request Smuggling / Desync testing tool written in Python 3",
+    "language": "Python"
+  },
+  {
+    "name": "deadlinks",
+    "link": "https://github.com/butuzov/deadlinks",
+    "type": "Scanner",
+    "tags": [
+      "broken-link"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Health checks for your documentation links.",
+    "language": "Python"
+  },
+  {
+    "name": "SQLiDetector",
+    "link": "https://github.com/eslam3kl/SQLiDetector",
+    "type": "Scanner",
+    "tags": [
+      "sqli"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Simple python script supported with BurpBouty profile that helps you to detect SQL injection \"Error based\" by sending multiple requests with 14 payloads and checking for 152 regex patterns for different databases.",
+    "language": "Python"
+  },
+  {
+    "name": "dontgo403",
+    "link": "https://github.com/devploit/dontgo403",
+    "type": "Scanner",
+    "tags": [
+      "403"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Tool to bypass 40X response codes.",
+    "language": "Go"
+  },
+  {
+    "name": "AWSBucketDump",
+    "link": "https://github.com/jordanpotti/AWSBucketDump",
+    "type": "Scanner",
+    "tags": [
+      "s3"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Security Tool to Look For Interesting Files in S3 Buckets",
+    "language": "Python"
+  },
+  {
+    "name": "Corsy",
+    "link": "https://github.com/s0md3v/Corsy",
+    "type": "Scanner",
+    "tags": [
+      "cors"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "CORS Misconfiguration Scanner",
+    "language": "Python"
+  },
+  {
+    "name": "Striker",
+    "link": "https://github.com/s0md3v/Striker",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Striker is an offensive information and vulnerability scanner.",
+    "language": "Python"
+  },
+  {
+    "name": "http-request-smuggling",
+    "link": "https://github.com/anshumanpattnaik/http-request-smuggling",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "HTTP Request Smuggling Detection Tool",
+    "language": "Python"
+  },
+  {
+    "name": "jsprime",
+    "link": "https://github.com/dpnishant/jsprime",
+    "type": "Scanner",
+    "tags": [
+      "js-analysis"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "a javascript static security analysis tool",
+    "language": "JavaScript"
+  },
+  {
+    "name": "rapidscan",
+    "link": "https://github.com/skavngr/rapidscan",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "The Multi-Tool Web Vulnerability Scanner.",
+    "language": "Python"
+  },
+  {
+    "name": "h2csmuggler",
+    "link": "https://github.com/assetnote/h2csmuggler",
+    "type": "Scanner",
+    "tags": [
+      "smuggle"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "HTTP Request Smuggling Detection Tool",
+    "language": "Go"
+  },
+  {
+    "name": "corsair_scan",
+    "link": "https://github.com/Santandersecurityresearch/corsair_scan",
+    "type": "Scanner",
+    "tags": [
+      "cors"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Corsair_scan is a security tool to test Cross-Origin Resource Sharing (CORS).",
+    "language": "Python"
+  },
+  {
+    "name": "smugglex",
+    "link": "https://github.com/hahwul/smugglex",
+    "type": "Scanner",
+    "tags": [
+      "smuggle"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Rust-powered HTTP Request Smuggling Scanner",
+    "language": "Rust"
+  },
+  {
+    "name": "DSSS",
+    "link": "https://github.com/stamparm/DSSS",
+    "type": "Scanner",
+    "tags": [
+      "sqli"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Damn Small SQLi Scanner",
+    "language": "Python"
+  },
+  {
+    "name": "web_cache_poison",
+    "link": "https://github.com/fngoo/web_cache_poison",
+    "type": "Scanner",
+    "tags": [
+      "cache-vuln"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "web cache poison - Top 1 web hacking technique of 2019",
+    "language": "Shell"
+  },
+  {
+    "name": "tplmap",
+    "link": "https://github.com/epinna/tplmap",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Server-Side Template Injection and Code Injection Detection and Exploitation Tool",
+    "language": "Python"
+  },
+  {
+    "name": "trivy",
+    "link": "https://github.com/aquasecurity/trivy",
+    "type": "Scanner",
+    "tags": [
+      "vulnerability-scanner",
+      "container-security",
+      "sbom"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
+    "language": "Go"
+  },
+  {
+    "name": "commix",
+    "link": "https://github.com/commixproject/commix",
+    "type": "Scanner",
+    "tags": [
+      "exploit"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Automated All-in-One OS Command Injection Exploitation Tool.",
+    "language": "Python"
+  },
+  {
+    "name": "S3cret Scanner",
+    "link": "https://github.com/Eilonh/s3crets_scanner",
+    "type": "Scanner",
+    "tags": [
+      "s3"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Hunting For Secrets Uploaded To Public S3 Buckets",
+    "language": "Python"
+  },
+  {
+    "name": "headi",
+    "link": "https://github.com/mlcsec/headi",
+    "type": "Scanner",
+    "tags": [
+      "header"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Customisable  and automated HTTP header injection",
+    "language": "Go"
+  },
+  {
+    "name": "OpenRedireX",
+    "link": "https://github.com/devanshbatham/OpenRedireX",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A Fuzzer for OpenRedirect issues",
+    "language": "Python"
+  },
+  {
+    "name": "domdig",
+    "link": "https://github.com/fcavallarin/domdig",
+    "type": "Scanner",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "DOM XSS scanner for Single Page Applications",
+    "language": "JavaScript"
+  },
+  {
+    "name": "CorsMe",
+    "link": "https://github.com/Shivangx01b/CorsMe",
+    "type": "Scanner",
+    "tags": [
+      "cors"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Cross Origin Resource Sharing MisConfiguration Scanner",
+    "language": "Go"
+  },
+  {
+    "name": "ConfusedDotnet",
+    "link": "https://github.com/visma-prodsec/ConfusedDotnet",
+    "type": "Scanner",
+    "tags": [
+      "dependency-confusion"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Tool to check for dependency confusion vulnerabilities in NuGet package management systems",
+    "language": "C#"
+  },
+  {
+    "name": "NoSQLMap",
+    "link": "https://github.com/codingo/NoSQLMap",
+    "type": "Scanner",
+    "tags": [
+      "nosqli"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Automated NoSQL database enumeration and web application exploitation tool.",
+    "language": "Python"
+  },
+  {
+    "name": "plution",
+    "link": "https://github.com/raverrr/plution",
+    "type": "Scanner",
+    "tags": [
+      "prototypepollution",
+      "prototype-pollution"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Prototype pollution scanner using headless chrome",
+    "language": "Go"
+  },
+  {
+    "name": "HRS",
+    "link": "https://github.com/SafeBreach-Labs/HRS",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "HTTP Request Smuggling demonstration Perl script, for variants 1, 2 and 5 in my BlackHat US 2020 paper HTTP Request Smuggling in 2020.",
+    "language": "Perl"
+  },
+  {
+    "name": "cloud-audit",
+    "link": "https://github.com/gebalamariusz/cloud-audit",
+    "type": "Scanner",
+    "tags": [
+      "aws",
+      "cloud",
+      "security",
+      "terraform"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Fast, opinionated AWS security scanner with Terraform remediation and attack chain detection",
+    "language": "Python"
+  },
+  {
+    "name": "xsssniper",
+    "link": "https://github.com/gbrindisi/xsssniper",
+    "type": "Scanner",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "An automatic XSS discovery tool",
+    "language": "Python"
+  },
+  {
+    "name": "Chromium-based-XSS-Taint-Tracking",
+    "link": "https://github.com/v8blink/Chromium-based-XSS-Taint-Tracking",
+    "type": "Scanner",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Cyclops is a web browser with XSS detection feature, it is chromium-based xss detection that used to find the flows from a source to a sink."
+  },
+  {
+    "name": "confused",
+    "link": "https://github.com/visma-prodsec/confused",
+    "type": "Scanner",
+    "tags": [
+      "dependency-confusion"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Tool to check for dependency confusion vulnerabilities in multiple package management systems",
+    "language": "Go"
+  },
+  {
+    "name": "nuclei",
+    "link": "https://github.com/projectdiscovery/nuclei",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Nuclei is a fast tool for configurable targeted scanning based on templates offering massive extensibility and ease of use.",
+    "language": "Go"
+  },
+  {
+    "name": "Taipan",
+    "link": "https://github.com/enkomio/Taipan",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Web application vulnerability scanner"
+  },
+  {
+    "name": "github-search",
+    "link": "https://github.com/gwen001/github-search",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Tools to perform basic search on GitHub.",
+    "language": "JavaScript"
+  },
+  {
+    "name": "NoXss",
+    "link": "https://github.com/lwzSoviet/",
+    "type": "Scanner",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Faster xss scanner,support reflected-xss and dom-xss",
+    "language": "Python"
+  },
+  {
+    "name": "arachni",
+    "link": "https://github.com/Arachni/arachni",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Web Application Security Scanner Framework",
+    "language": "Ruby"
+  },
+  {
+    "name": "trufflehog",
+    "link": "https://github.com/trufflesecurity/trufflehog",
+    "type": "Scanner",
+    "tags": [
+      "secret-scanning",
+      "credentials"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Find and verify credentials in git repositories, filesystems, and S3 buckets",
+    "language": "Go"
+  },
+  {
+    "name": "nmap",
+    "link": "https://github.com/nmap/nmap",
+    "type": "Scanner",
+    "tags": [
+      "portscan"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Nmap - the Network Mapper. Github mirror of official SVN repository.",
+    "language": "C"
+  },
+  {
+    "name": "V3n0M-Scanner",
+    "link": "https://github.com/v3n0m-Scanner/V3n0M-Scanner",
+    "type": "Scanner",
+    "tags": [
+      "sqli",
+      "xss",
+      "lfi",
+      "rfi"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Popular Pentesting scanner in Python3.6 for SQLi/XSS/LFI/RFI and other Vulns",
+    "language": "Python"
+  },
+  {
+    "name": "DeadFinder",
+    "link": "https://github.com/hahwul/deadfinder",
+    "type": "Scanner",
+    "tags": [
+      "broken-link"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Find dead-links (broken links)",
+    "language": "Ruby"
+  },
+  {
+    "name": "wpscan",
+    "link": "https://github.com/wpscanteam/wpscan",
+    "type": "Scanner",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "WPScan is a free, for non-commercial use, black box WordPress Vulnerability Scanner written for security professionals and blog maintainers to test the security of their WordPress websites.",
+    "language": "Ruby"
+  },
+  {
+    "name": "beef",
+    "link": "https://github.com/beefproject/beef",
+    "type": "Exploit",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "The Browser Exploitation Framework Project",
+    "language": "Ruby"
+  },
+  {
+    "name": "Gopherus",
+    "link": "https://github.com/tarunkant/Gopherus",
+    "type": "Exploit",
+    "tags": [
+      "ssrf"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "This tool generates gopher link for exploiting SSRF and gaining RCE in various servers",
+    "language": "Python"
+  },
+  {
+    "name": "SQLNinja",
+    "link": "https://gitlab.com/kalilinux/packages/sqlninja",
+    "type": "Exploit",
+    "tags": [
+      "sqli"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "sourceSection": "Tools",
+    "description": "Sqlninja is a tool targeted to exploit SQL Injection vulnerabilities.",
+    "language": "Perl"
+  },
+  {
+    "name": "jwt_tool",
+    "link": "https://github.com/ticarpi/jwt_tool",
+    "type": "Exploit",
+    "tags": [
+      "jwt",
+      "authentication"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A toolkit for testing, tweaking and cracking JSON Web Tokens",
+    "language": "Python"
+  },
+  {
+    "name": "toxssin",
+    "link": "https://github.com/t3l3machus/toxssin",
+    "type": "Exploit",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "An XSS exploitation command-line interface and payload generator.",
+    "language": "Python"
+  },
+  {
+    "name": "Sn1per",
+    "link": "https://github.com/1N3/Sn1per",
+    "type": "Exploit",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Automated pentest framework for offensive security experts",
+    "language": "Shell"
+  },
+  {
+    "name": "ghauri",
+    "link": "https://github.com/r0oth3x49/ghauri",
+    "type": "Exploit",
+    "tags": [
+      "sqli"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "An advanced cross-platform tool that automates the process of detecting and exploiting SQL injection security flaws",
+    "language": "Python"
+  },
+  {
+    "name": "XXEinjector",
+    "link": "https://github.com/enjoiz/XXEinjector",
+    "type": "Exploit",
+    "tags": [
+      "xxe"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Tool for automatic exploitation of XXE vulnerability using direct and different out of band methods.",
+    "language": "Ruby"
+  },
+  {
+    "name": "Liffy",
+    "link": "https://github.com/mzfr/liffy",
+    "type": "Exploit",
+    "tags": [
+      "lfi"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Local file inclusion exploitation tool",
+    "language": "Python"
+  },
+  {
+    "name": "singularity",
+    "link": "https://github.com/nccgroup/singularity",
+    "type": "Exploit",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A DNS rebinding attack framework.",
+    "language": "JavaScript"
+  },
+  {
+    "name": "XXExploiter",
+    "link": "https://github.com/luisfontes19/xxexploiter",
+    "type": "Exploit",
+    "tags": [
+      "xxe"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Tool to help exploit XXE vulnerabilities",
+    "language": "TypeScript"
+  },
+  {
+    "name": "XSRFProbe",
+    "link": "https://github.com/0xInfection/XSRFProbe",
+    "type": "Exploit",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "The Prime Cross Site Request Forgery (CSRF) Audit and Exploitation Toolkit.",
+    "language": "Python"
+  },
+  {
+    "name": "ropr",
+    "link": "https://github.com/Ben-Lichtman/ropr",
+    "type": "Exploit",
+    "tags": [
+      "rop"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A blazing fast™ multithreaded ROP Gadget finder. ropper",
+    "language": "Rust"
+  },
+  {
+    "name": "BaRMIe",
+    "link": "https://github.com/NickstaDB/BaRMIe",
+    "type": "Exploit",
+    "tags": [
+      "RMI"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Java RMI enumeration and attack tool.",
+    "language": "Java"
+  },
+  {
+    "name": "xxeserv",
+    "link": "https://github.com/staaldraad/xxeserv",
+    "type": "Exploit",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A mini webserver with FTP support for XXE payloads",
+    "language": "Go"
+  },
+  {
+    "name": "of-CORS",
+    "link": "https://github.com/trufflesecurity/of-CORS",
+    "type": "Exploit",
+    "tags": [
+      "cors"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Identifying and exploiting CORS misconfigurations on the internal networks",
+    "language": "Python"
+  },
+  {
+    "name": "dnsobserver",
+    "link": "https://github.com/allyomalley/dnsobserver",
+    "type": "Utils",
+    "tags": [
+      "oast",
+      "dns"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A handy DNS service written in Go to aid in the detection of several types of blind vulnerabilities. It monitors a pentester's server for out-of-band DNS interactions and sends lookup notifications via Slack.",
+    "language": "Go"
+  },
+  {
+    "name": "template-generator",
+    "link": "https://github.com/fransr/template-generator",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A simple variable based template editor using handlebarjs+strapdownjs. The idea is to use variables in markdown based files to easily replace the variables with content. Data is saved temporarily in local storage. PHP is only needed to generate the list of files in the dropdown of templates.",
+    "language": "JavaScript"
+  },
+  {
+    "name": "race-the-web",
+    "link": "https://github.com/TheHackerDev/race-the-web",
+    "type": "Utils",
+    "tags": [
+      "race-condition"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Tests for race conditions in web applications by sending out a user-specified number of requests to a target URL (or URLs) simultaneously, and then compares the responses from the server for uniqueness.",
+    "language": "Go"
+  },
+  {
+    "name": "gf",
+    "link": "https://github.com/tomnomnom/gf",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A wrapper around grep, to help you grep for things",
+    "language": "Go"
+  },
+  {
+    "name": "SequenceDiagram",
+    "link": "https://sequencediagram.org",
+    "type": "Utils",
+    "tags": [
+      "online"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Online tool for creating UML sequence diagrams"
+  },
+  {
+    "name": "230-OOB",
+    "link": "https://github.com/lc/230-OOB",
+    "type": "Utils",
+    "tags": [
+      "xxe"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "An Out-of-Band XXE server for retrieving file contents over FTP.",
+    "language": "Python"
+  },
+  {
+    "name": "GadgetProbe",
+    "link": "https://github.com/BishopFox/GadgetProbe",
+    "type": "Utils",
+    "tags": [
+      "deserialize"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Probe endpoints consuming Java serialized objects to identify classes, libraries, and library versions on remote Java classpaths.",
+    "language": "Java"
+  },
+  {
+    "name": "pentest-tools",
+    "link": "https://github.com/gwen001/pentest-tools",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Custom pentesting tools",
+    "language": "Python"
+  },
+  {
+    "name": "difftastic",
+    "link": "https://github.com/Wilfred/difftastic",
+    "type": "Utils",
+    "tags": [
+      "diff"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "a structural diff that understands syntax",
+    "language": "Rust"
+  },
+  {
+    "name": "unfurl",
+    "link": "https://github.com/tomnomnom/unfurl",
+    "type": "Utils",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Pull out bits of URLs provided on stdin",
+    "language": "Go"
+  },
+  {
+    "name": "ysoserial.net",
+    "link": "https://github.com/pwntester/ysoserial.net",
+    "type": "Utils",
+    "tags": [
+      "deserialize"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Deserialization payload generator for a variety of .NET formatters",
+    "language": "C#"
+  },
+  {
+    "name": "docem",
+    "link": "https://github.com/whitel1st/docem",
+    "type": "Utils",
+    "tags": [
+      "xxe",
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Uility to embed XXE and XSS payloads in docx,odt,pptx,etc (OXML_XEE on steroids)",
+    "language": "Python"
+  },
+  {
+    "name": "Bug-Bounty-Toolz",
+    "link": "https://github.com/m4ll0k/Bug-Bounty-Toolz",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "BBT - Bug Bounty Tools",
+    "language": "Python"
+  },
+  {
+    "name": "pdtm",
+    "link": "https://github.com/projectdiscovery/pdtm",
+    "type": "Utils",
+    "tags": [
+      "package-manager",
+      "tools-management"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "ProjectDiscovery's Open Source Tool Manager",
+    "language": "Go"
+  },
+  {
+    "name": "gxss",
+    "link": "https://github.com/rverton/gxss",
+    "type": "Utils",
+    "tags": [
+      "xss",
+      "blind-xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Blind XSS service alerting over slack or email",
+    "language": "Go"
+  },
+  {
+    "name": "reverse-shell-generator",
+    "link": "https://github.com/0dayCTF/reverse-shell-generator",
+    "type": "Utils",
+    "tags": [
+      "payload"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Hosted Reverse Shell generator with a ton of functionality. -- (Great for CTFs)",
+    "language": "JavaScript"
+  },
+  {
+    "name": "hakcheckurl",
+    "link": "https://github.com/hakluke/hakcheckurl",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Takes a list of URLs and returns their HTTP response codes",
+    "language": "Go"
+  },
+  {
+    "name": "urlprobe",
+    "link": "https://github.com/1ndianl33t/urlprobe",
+    "type": "Utils",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Urls status code & content length checker",
+    "language": "Go"
+  },
+  {
+    "name": "quickjack",
+    "link": "https://github.com/samyk/quickjack",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Quickjack is a point-and-click tool for intuitively producing advanced clickjacking and frame slicing attacks.",
+    "language": "JavaScript"
+  },
+  {
+    "name": "grc",
+    "link": "https://github.com/garabik/grc",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "generic colouriser",
+    "language": "Python"
+  },
+  {
+    "name": "security-crawl-maze",
+    "link": "https://github.com/google/security-crawl-maze",
+    "type": "Utils",
+    "tags": [
+      "crawl"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Security Crawl Maze is a comprehensive testbed for web security crawlers. It contains pages representing many ways in which one can link resources from a valid HTML document.",
+    "language": "HTML"
+  },
+  {
+    "name": "fff",
+    "link": "https://github.com/tomnomnom/fff",
+    "type": "Utils",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "The Fairly Fast Fetcher. Requests a bunch of URLs provided on stdin fairly quickly.",
+    "language": "Go"
+  },
+  {
+    "name": "gron",
+    "link": "https://github.com/tomnomnom/gron",
+    "type": "Utils",
+    "tags": [
+      "json"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Make JSON greppable!",
+    "language": "Go"
+  },
+  {
+    "name": "tiscripts",
+    "link": "https://github.com/defparam/tiscripts",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Turbo Intruder Scripts",
+    "language": "Python"
+  },
+  {
+    "name": "wssip",
+    "link": "https://github.com/nccgroup/wssip",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Application for capturing, modifying and sending custom WebSocket data from client to server and vice versa.",
+    "language": "JavaScript"
+  },
+  {
+    "name": "gotator",
+    "link": "https://github.com/Josue87/gotator",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Gotator is a tool to generate DNS wordlists through permutations.",
+    "language": "Go"
+  },
+  {
+    "name": "xless",
+    "link": "https://github.com/mazen160/xless",
+    "type": "Utils",
+    "tags": [
+      "xss",
+      "blind-xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "The Serverless Blind XSS App",
+    "language": "JavaScript"
+  },
+  {
+    "name": "Blacklist3r",
+    "link": "https://github.com/NotSoSecure/Blacklist3r",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "project-blacklist3r",
+    "language": "C#"
+  },
+  {
+    "name": "curl",
+    "link": "https://github.com/curl/curl",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A command line tool and library for transferring data with URL syntax, supporting HTTP, HTTPS, FTP, FTPS, GOPHER, TFTP, SCP, SFTP, SMB, TELNET, DICT, LDAP, LDAPS, MQTT, FILE, IMAP, SMTP, POP3, RTSP and RTMP. libcurl offers a myriad of powerful features",
+    "language": "C"
+  },
+  {
+    "name": "pet",
+    "link": "https://github.com/knqyf263/pet",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Simple command-line snippet manager, written in Go.",
+    "language": "Go"
+  },
+  {
+    "name": "interactsh",
+    "link": "https://github.com/projectdiscovery/interactsh",
+    "type": "Utils",
+    "tags": [
+      "oast"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "An OOB interaction gathering server and client library",
+    "language": "Go"
+  },
+  {
+    "name": "gitls",
+    "link": "https://github.com/hahwul/gitls",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Listing git repository from URL/User/Org",
+    "language": "Go"
+  },
+  {
+    "name": "CSP Evaluator",
+    "link": "https://csp-evaluator.withgoogle.com",
+    "type": "Utils",
+    "tags": [
+      "csp"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Online CSP Evaluator from google"
+  },
+  {
+    "name": "nuclei-templates",
+    "link": "https://github.com/projectdiscovery/nuclei-templates",
+    "type": "Utils",
+    "tags": [
+      "nuclei-templates"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Community curated list of templates for the nuclei engine to find security vulnerabilities.",
+    "language": "Go"
+  },
+  {
+    "name": "cent",
+    "link": "https://github.com/xm1k3/cent",
+    "type": "Utils",
+    "tags": [
+      "nuclei-templates"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Community edition nuclei templates, a simple tool that allows you to organize all the Nuclei templates offered by the community in one place.",
+    "language": "Go"
+  },
+  {
+    "name": "Emissary",
+    "link": "https://github.com/BountyStrike/Emissary",
+    "type": "Utils",
+    "tags": [
+      "notify"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Send notifications on different channels such as Slack, Telegram, Discord etc.",
+    "language": "Go"
+  },
+  {
+    "name": "weaponised-XSS-payloads",
+    "link": "https://github.com/hakluke/weaponised-XSS-payloads",
+    "type": "Utils",
+    "tags": [
+      "xss",
+      "documents"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "XSS payloads designed to turn alert(1) into P1",
+    "language": "JavaScript"
+  },
+  {
+    "name": "github-regexp",
+    "link": "https://github.com/gwen001/github-regexp",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Basically a regexp over a GitHub search.",
+    "language": "Go"
+  },
+  {
+    "name": "autochrome",
+    "link": "https://github.com/nccgroup/autochrome",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "This tool downloads, installs, and configures a shiny new copy of Chromium.",
+    "language": "HTML"
+  },
+  {
+    "name": "jsfuck",
+    "link": "https://github.com/aemkei/jsfuck",
+    "type": "Utils",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Write any JavaScript with 6 Characters",
+    "language": "JavaScript"
+  },
+  {
+    "name": "CyberChef",
+    "link": "https://github.com/gchq/CyberChef",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "The Cyber Swiss Army Knife - a web app for encryption, encoding, compression and data analysis",
+    "language": "JavaScript"
+  },
+  {
+    "name": "PoC-in-GitHub",
+    "link": "https://github.com/nomi-sec/PoC-in-GitHub",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "📡 PoC auto collect from GitHub. Be careful  malware."
+  },
+  {
+    "name": "XSS-Catcher",
+    "link": "https://github.com/daxAKAhackerman/XSS-Catcher",
+    "type": "Utils",
+    "tags": [
+      "xss",
+      "blind-xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Find blind XSS but why not gather data while you're at it.",
+    "language": "Python"
+  },
+  {
+    "name": "Phoenix",
+    "link": "https://www.hahwul.com/phoenix/",
+    "type": "Utils",
+    "tags": [
+      "online"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "hahwul's online tools",
+    "language": "JavaScript"
+  },
+  {
+    "name": "hoppscotch",
+    "link": "https://github.com/hoppscotch/hoppscotch",
+    "type": "Utils",
+    "tags": [
+      "http"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Open source API development ecosystem",
+    "language": "TypeScript"
+  },
+  {
+    "name": "xssor2",
+    "link": "https://github.com/evilcos/xssor2",
+    "type": "Utils",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "XSS'OR - Hack with JavaScript.",
+    "language": "JavaScript"
+  },
+  {
+    "name": "xss-cheatsheet-data",
+    "link": "https://github.com/PortSwigger/xss-cheatsheet-data",
+    "type": "Utils",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "This repository contains all the XSS cheatsheet data to allow contributions from the community."
+  },
+  {
+    "name": "godeclutter",
+    "link": "https://github.com/c3l3si4n/godeclutter",
+    "type": "Utils",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Declutters URLs in a fast and flexible way, for improving input for web hacking automations such as crawlers and vulnerability scans.",
+    "language": "Go"
+  },
+  {
+    "name": "hurl",
+    "link": "https://github.com/Orange-OpenSource/hurl",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Hurl, run and test HTTP requests.",
+    "language": "Rust"
+  },
+  {
+    "name": "Atlas",
+    "link": "https://github.com/m4ll0k/Atlas",
+    "type": "Utils",
+    "tags": [
+      "sqli"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Quick SQLMap Tamper Suggester",
+    "language": "Python"
+  },
+  {
+    "name": "pwncat",
+    "link": "https://github.com/cytopia/pwncat",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "pwncat - netcat on steroids with Firewall, IDS/IPS evasion, bind and reverse shell, self-injecting shell and port forwarding magic - and its fully scriptable with Python (PSE)",
+    "language": "Shell"
+  },
+  {
+    "name": "ysoserial",
+    "link": "https://github.com/frohoff/ysoserial",
+    "type": "Utils",
+    "tags": [
+      "deserialize"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.",
+    "language": "Java"
+  },
+  {
+    "name": "Clipboard",
+    "link": "https://github.com/Slackadays/Clipboard",
+    "type": "Utils",
+    "tags": [
+      "clipboard"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "An external brain that remembers anything, anytime, anywhere.",
+    "language": "C++"
+  },
+  {
+    "name": "Gf-Patterns",
+    "link": "https://github.com/1ndianl33t/Gf-Patterns",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "GF Paterns For (ssrf,RCE,Lfi,sqli,ssti,idor,url redirection,debug_logic) parameters grep"
+  },
+  {
+    "name": "can-i-take-over-xyz",
+    "link": "https://github.com/EdOverflow/can-i-take-over-xyz",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "\"Can I take over XYZ?\" — a list of services and how to claim (sub)domains with dangling DNS records."
+  },
+  {
+    "name": "Findsploit",
+    "link": "https://github.com/1N3/Findsploit",
+    "type": "Utils",
+    "tags": [
+      "exploit"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Find exploits in local and online databases instantly",
+    "language": "Shell"
+  },
+  {
+    "name": "fzf",
+    "link": "https://github.com/junegunn/fzf",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A command-line fuzzy finder",
+    "language": "Go"
+  },
+  {
+    "name": "GQLSpection",
+    "link": "https://github.com/doyensec/GQLSpection",
+    "type": "Utils",
+    "tags": [
+      "graphql"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "parses GraphQL introspection schema and generates possible queries",
+    "language": "Python"
+  },
+  {
+    "name": "bountyplz",
+    "link": "https://github.com/fransr/bountyplz",
+    "type": "Utils",
+    "tags": [
+      "report"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Automated security reporting from markdown templates (HackerOne and Bugcrowd are currently the platforms supported)",
+    "language": "Shell"
+  },
+  {
+    "name": "gotestwaf",
+    "link": "https://github.com/wallarm/gotestwaf",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "An open-source project in Golang to test different web application firewalls (WAF) for detection logic and bypasses",
+    "language": "Go"
+  },
+  {
+    "name": "Assetnote Wordlists",
+    "link": "https://github.com/assetnote/wordlists",
+    "type": "Utils",
+    "tags": [
+      "wordlist",
+      "documents"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Automated & Manual Wordlists provided by Assetnote",
+    "language": "CSS"
+  },
+  {
+    "name": "wuzz",
+    "link": "https://github.com/asciimoo/wuzz",
+    "type": "Utils",
+    "tags": [
+      "http"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Interactive cli tool for HTTP inspection",
+    "language": "Go"
+  },
+  {
+    "name": "oxml_xxe",
+    "link": "https://github.com/BuffaloWill/oxml_xxe",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A tool for embedding XXE/XML exploits into different filetypes",
+    "language": "Ruby"
+  },
+  {
+    "name": "gee",
+    "link": "https://github.com/hahwul/gee",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "🏵 Gee is tool of stdin to each files and stdout. It is similar to the tee command, but there are more functions for convenience. In addition, it was written as go",
+    "language": "Go"
+  },
+  {
+    "name": "anew",
+    "link": "https://github.com/tomnomnom/anew",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A tool for adding new lines to files, skipping duplicates",
+    "language": "Go"
+  },
+  {
+    "name": "Redcloud",
+    "link": "https://github.com/khast3x/Redcloud",
+    "type": "Utils",
+    "tags": [
+      "infra"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Automated Red Team Infrastructure deployement using Docker",
+    "language": "Python"
+  },
+  {
+    "name": "qsreplace",
+    "link": "https://github.com/tomnomnom/qsreplace",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Accept URLs on stdin, replace all query string values with a user-supplied value",
+    "language": "Go"
+  },
+  {
+    "name": "PayloadsAllTheThings",
+    "link": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A list of useful payloads and bypass for Web Application Security and Pentest/CTF",
+    "language": "Python"
+  },
+  {
+    "name": "grex",
+    "link": "https://github.com/pemistahl/grex",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A command-line tool and library for generating regular expressions from user-provided test cases",
+    "language": "Rust"
+  },
+  {
+    "name": "httptoolkit",
+    "link": "https://github.com/httptoolkit/httptoolkit",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "HTTP Toolkit is a beautiful & open-source tool for debugging, testing and building with HTTP(S) on Windows, Linux & Mac"
+  },
+  {
+    "name": "SecLists",
+    "link": "https://github.com/danielmiessler/SecLists",
+    "type": "Utils",
+    "tags": [
+      "wordlist",
+      "documents"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "SecLists is the security tester's companion. It's a collection of multiple types of lists used during security assessments, collected in one place.",
+    "language": "Txt"
+  },
+  {
+    "name": "dsieve",
+    "link": "https://github.com/trickest/dsieve",
+    "type": "Utils",
+    "tags": [
+      "subdomains"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Filter and enrich a list of subdomains by level",
+    "language": "Go"
+  },
+  {
+    "name": "IntruderPayloads",
+    "link": "https://github.com/1N3/IntruderPayloads",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "burp"
+    ],
+    "sourceSection": "Tools",
+    "language": "BlitzBasic"
+  },
+  {
+    "name": "burl",
+    "link": "https://github.com/tomnomnom/burl",
+    "type": "Utils",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A Broken-URL Checker",
+    "language": "Go"
+  },
+  {
+    "name": "eoyc",
+    "link": "https://github.com/hahwul/eoyc",
+    "type": "Utils",
+    "tags": [
+      "encode"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Encoding Only Your Choices",
+    "language": "Crystal"
+  },
+  {
+    "name": "boast",
+    "link": "https://github.com/marcoagner/boast",
+    "type": "Utils",
+    "tags": [
+      "oast"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "The BOAST Outpost for AppSec Testing (v0.1.0)",
+    "language": "Go"
+  },
+  {
+    "name": "bruteforce-lists",
+    "link": "https://github.com/random-robbie/bruteforce-lists",
+    "type": "Utils",
+    "tags": [
+      "wordlist",
+      "documents"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Some files for bruteforcing certain things.",
+    "language": "Txt"
+  },
+  {
+    "name": "hacks",
+    "link": "https://github.com/tomnomnom/hacks",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A collection of hacks and one-off scripts",
+    "language": "Go"
+  },
+  {
+    "name": "blistener",
+    "link": "https://github.com/fyxme/blistener",
+    "type": "Utils",
+    "tags": [
+      "xss",
+      "blind-xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Blind-XSS listener with payloads",
+    "language": "Go"
+  },
+  {
+    "name": "hbxss",
+    "link": "https://github.com/hahwul/hbxss",
+    "type": "Utils",
+    "tags": [
+      "xss",
+      "blind-xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Security test tool for Blind XSS",
+    "language": "Ruby"
+  },
+  {
+    "name": "ezXSS",
+    "link": "https://github.com/ssl/ezXSS",
+    "type": "Utils",
+    "tags": [
+      "xss",
+      "blind-xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "ezXSS is an easy way for penetration testers and bug bounty hunters to test (blind) Cross Site Scripting.",
+    "language": "PHP"
+  },
+  {
+    "name": "security-research-pocs",
+    "link": "https://github.com/google/security-research-pocs",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Proof-of-concept codes created as part of security research done by Google Security Team.",
+    "language": "C++"
+  },
+  {
+    "name": "bat",
+    "link": "https://github.com/sharkdp/bat",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A cat(1) clone with wings.",
+    "language": "Rust"
+  },
+  {
+    "name": "mapcidr",
+    "link": "https://github.com/projectdiscovery/mapcidr",
+    "type": "Utils",
+    "tags": [
+      "cidr",
+      "network",
+      "ip-manipulation"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Utility program to perform multiple operations for a given subnet/CIDR ranges",
+    "language": "Go"
+  },
+  {
+    "name": "nuclei-wordfence-cve",
+    "link": "https://github.com/topscoder/nuclei-wordfence-cve",
+    "type": "Utils",
+    "tags": [
+      "nuclei-templates"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Every single day new templates are added to this repo based on updates on Wordfence.com",
+    "language": "Python"
+  },
+  {
+    "name": "SerializationDumper",
+    "link": "https://github.com/NickstaDB/SerializationDumper",
+    "type": "Utils",
+    "tags": [
+      "deserialize"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A tool to dump Java serialization streams in a more human readable form.",
+    "language": "Java"
+  },
+  {
+    "name": "httpie",
+    "link": "https://github.com/httpie/httpie",
+    "type": "Utils",
+    "tags": [
+      "http"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "modern, user-friendly command-line HTTP client for the API era",
+    "language": "Python"
+  },
+  {
+    "name": "urlgrab",
+    "link": "https://github.com/IAmStoxe/urlgrab",
+    "type": "Utils",
+    "tags": [
+      "url"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A golang utility to spider through a website searching for additional links.",
+    "language": "Go"
+  },
+  {
+    "name": "zip-bomb",
+    "link": "https://github.com/damianrusinek/zip-bomb",
+    "type": "Utils",
+    "tags": [
+      "zipbomb"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Create a ZIPBomb for a given uncompressed size (flat and nested modes).",
+    "language": "Python"
+  },
+  {
+    "name": "ZipBomb",
+    "link": "https://github.com/abdulfatir/ZipBomb",
+    "type": "Utils",
+    "tags": [
+      "zipbomb"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "A simple implementation of ZipBomb in Python",
+    "language": "Python"
+  },
+  {
+    "name": "mubeng",
+    "link": "https://github.com/kitabisa/mubeng",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "An incredibly fast proxy checker & IP rotator with ease.",
+    "language": "Go"
+  },
+  {
+    "name": "slackcat",
+    "link": "https://github.com/bcicen/slackcat",
+    "type": "Utils",
+    "tags": [
+      "notify"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "CLI utility to post files and command output to slack",
+    "language": "Go"
+  },
+  {
+    "name": "graphql-voyager",
+    "link": "https://github.com/APIs-guru/graphql-voyager",
+    "type": "Utils",
+    "tags": [
+      "graphql"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "🛰️ Represent any GraphQL API as an interactive graph",
+    "language": "TypeScript"
+  },
+  {
+    "name": "missing-cve-nuclei-templates",
+    "link": "https://github.com/edoardottt/missing-cve-nuclei-templates",
+    "type": "Utils",
+    "tags": [
+      "nuclei-templates"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Weekly updated list of missing CVEs in nuclei templates official repository",
+    "language": "Txt"
+  },
+  {
+    "name": "h2spacex",
+    "link": "https://github.com/nxenon/h2spacex",
+    "type": "Utils",
+    "tags": [
+      "race-condition"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "HTTP/2 Single Packet Attack low level library based on Scapy",
+    "language": "Python"
+  },
+  {
+    "name": "REcollapse",
+    "link": "https://github.com/0xacb/recollapse",
+    "type": "Utils",
+    "tags": [
+      "fuzz"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "REcollapse is a helper tool for black-box regex fuzzing to bypass validations and discover normalizations in web applications",
+    "language": "Python"
+  },
+  {
+    "name": "TukTuk",
+    "link": "https://github.com/ArturSS7/TukTuk",
+    "type": "Utils",
+    "tags": [
+      "oast"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Tool for catching and logging different types of requests.",
+    "language": "Go"
+  },
+  {
+    "name": "cf-check",
+    "link": "https://github.com/dwisiswant0/cf-check",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Cloudflare Checker written in Go",
+    "language": "Go"
+  },
+  {
+    "name": "s3reverse",
+    "link": "https://github.com/hahwul/s3reverse",
+    "type": "Utils",
+    "tags": [
+      "s3"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "The format of various s3 buckets is convert in one format. for bugbounty and security testing.",
+    "language": "Go"
+  },
+  {
+    "name": "ob_hacky_slack",
+    "link": "https://github.com/openbridge/ob_hacky_slack",
+    "type": "Utils",
+    "tags": [
+      "notify"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Hacky Slack - a bash script that sends beautiful messages to Slack",
+    "language": "Shell"
+  },
+  {
+    "name": "Glue",
+    "link": "https://github.com/OWASP/glue",
+    "type": "Env",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Application Security Automation",
+    "language": "Ruby"
+  },
+  {
+    "name": "Crimson",
+    "link": "https://github.com/Karmaz95/crimson",
+    "type": "Env",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Web Application Security Testing automation.",
+    "language": "Python"
+  },
+  {
+    "name": "pentest-env",
+    "link": "https://github.com/Sliim/pentest-env",
+    "type": "Env",
+    "tags": [
+      "pentest"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Tools",
+    "description": "Pentest environment deployer (kali linux + targets) using vagrant and chef.",
+    "language": "Ruby"
+  }
+]

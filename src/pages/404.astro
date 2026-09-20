@@ -1,0 +1,39 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="404" description="Page not found." index={false}>
+  <section class="section section--first">
+    <div class="wrap not-found">
+      <p class="meta" data-intro>404</p>
+      <h1 data-intro style="animation-delay: 80ms;">nothing to take apart here.</h1>
+      <p class="text-secondary" data-intro style="animation-delay: 160ms;">
+        either this page never existed, or it did and I broke it. both are
+        plausible.
+      </p>
+      <a href="/" class="link link--accent" data-intro style="animation-delay: 240ms;">
+        back to the front page <span class="link__arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .section--first {
+    padding-top: clamp(4rem, 14vh, 8rem);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .not-found h1 {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    margin-block: 0.4em 0.6em;
+    max-width: 22ch;
+  }
+
+  .not-found .link {
+    display: inline-flex;
+    margin-top: 1.5rem;
+  }
+</style>

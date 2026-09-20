@@ -1,0 +1,262 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const builds = (await getCollection("builds")).sort((a, b) => b.data.weight - a.data.weight);
+
+const statusLabel: Record<string, string> = {
+  active: "in progress",
+  shipped: "shipped",
+  paused: "paused",
+  archived: "archived",
+};
+---
+
+<BaseLayout
+  title="builds"
+  description="An honest register of official projects — security tools and experiments, with real status, no portfolio gloss."
+>
+  <section class="section section--first">
+    <div class="wrap wrap--wide">
+      <h1 data-intro>builds</h1>
+      <p class="text-secondary intro" data-intro style="animation-delay: 80ms;">
+        official projects only. status is honest — "in progress" usually
+        means still actively broken somewhere.
+      </p>
+    </div>
+
+    <ol class="register wrap wrap--wide" data-reveal-group>
+      {
+        builds.map((build, i) => {
+          const isPrivate = build.data.visibility === "private";
+          const href = build.data.link ?? build.data.repo;
+          const isLink = !isPrivate && Boolean(href);
+          return (
+          <li class="entry">
+            {/* An <a> with no href is not a real hyperlink (not focusable,
+               no navigation) — used deliberately for private entries so
+               the exact same markup/styles apply without a dynamic tag. */}
+            <a
+              class="entry__link"
+              href={isLink ? href : undefined}
+              target={isLink ? "_blank" : undefined}
+              rel={isLink ? "noopener noreferrer" : undefined}
+              aria-disabled={isLink ? undefined : true}
+            >
+              <span class="entry__index meta">{String(i + 1).padStart(2, "0")}</span>
+
+              <span class="entry__main">
+                <span class="entry__title-row">
+                  <span class="entry__name">{build.data.name}</span>
+                  <span class={`status status--${build.data.visibility === "private" ? "private" : build.data.status}`}>
+                    {build.data.visibility === "private" ? "private" : statusLabel[build.data.status]}
+                  </span>
+                </span>
+
+                {build.data.tagline && <span class="entry__tagline italic">{build.data.tagline}</span>}
+
+                {build.data.type && <span class="meta entry__type">{build.data.type}</span>}
+
+                {build.data.summary ? (
+                  <span class="entry__summary text-secondary">{build.data.summary}</span>
+                ) : (
+                  build.data.visibility === "private" && (
+                    <span class="entry__summary text-secondary">
+                      private repository — not public, nothing more to show here.
+                    </span>
+                  )
+                )}
+
+                {build.data.tech.length > 0 && (
+                  <span class="tech-list">
+                    {build.data.tech.map((t) => (
+                      <span class="meta tech-pill">{t}</span>
+                    ))}
+                  </span>
+                )}
+              </span>
+
+              <span class="entry__action meta">
+                {build.data.visibility === "private"
+                  ? "no public repo"
+                  : build.data.link
+                    ? "visit ↗"
+                    : build.data.repo
+                      ? "public repository ↗"
+                      : ""}
+              </span>
+            </a>
+          </li>
+          );
+        })
+      }
+    </ol>
+  </section>
+</BaseLayout>
+
+<style>
+  .section--first {
+    padding-top: clamp(3rem, 8vw, 5rem);
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+  }
+
+  .intro {
+    margin-top: 0.75rem;
+    max-width: var(--measure);
+  }
+
+  .register {
+    list-style: none;
+    margin: 3rem auto 0;
+    padding: 0;
+  }
+
+  .entry {
+    border-top: 1px solid var(--border-soft);
+  }
+
+  .entry:last-child {
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .entry__link {
+    display: grid;
+    grid-template-columns: 2.2rem 1fr auto;
+    gap: 1.25rem;
+    align-items: start;
+    padding-block: 1.75rem;
+    text-decoration: none;
+    color: var(--text);
+    position: relative;
+    padding-left: 0.75rem;
+    transition: padding-left var(--dur-base) var(--ease-physical), background var(--dur-base) var(--ease-out);
+  }
+
+  .entry__link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    bottom: 1rem;
+    width: 2px;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform var(--dur-base) var(--ease-physical);
+  }
+
+  .entry__link[aria-disabled="true"] {
+    cursor: default;
+  }
+
+  .entry__link:not([aria-disabled="true"]):hover,
+  .entry__link:not([aria-disabled="true"]):focus-visible {
+    padding-left: 1.15rem;
+  }
+
+  .entry__link:not([aria-disabled="true"]):hover::before,
+  .entry__link:not([aria-disabled="true"]):focus-visible::before {
+    transform: scaleY(1);
+  }
+
+  .entry__index {
+    padding-top: 0.2rem;
+  }
+
+  .entry__main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-width: 0;
+  }
+
+  .entry__title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+  }
+
+  .entry__name {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+  }
+
+  .status {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2em 0.55em;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    color: var(--text-tertiary);
+  }
+
+  .status--active {
+    color: var(--accent);
+    border-color: var(--accent-dim);
+  }
+
+  .status--shipped {
+    color: #8fb87a;
+    border-color: #45613a;
+  }
+
+  .status--private {
+    color: var(--text-tertiary);
+    border-style: dashed;
+  }
+
+  .entry__tagline {
+    color: var(--accent);
+    font-size: 0.95rem;
+  }
+
+  .entry__type {
+    text-transform: lowercase;
+  }
+
+  .entry__summary {
+    font-size: 0.92rem;
+    max-width: 38rem;
+  }
+
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.2rem;
+  }
+
+  .tech-pill {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.15em 0.5em;
+  }
+
+  .entry__action {
+    white-space: nowrap;
+    padding-top: 0.25rem;
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+
+  .entry__link:not([aria-disabled="true"]):hover .entry__action,
+  .entry__link:not([aria-disabled="true"]):focus-visible .entry__action {
+    color: var(--accent);
+  }
+
+  @media (max-width: 36rem) {
+    .entry__link {
+      grid-template-columns: 1.6rem 1fr;
+    }
+
+    .entry__action {
+      grid-column: 2;
+      padding-top: 0;
+    }
+  }
+</style>

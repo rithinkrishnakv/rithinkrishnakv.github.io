@@ -1,0 +1,311 @@
+[
+  {
+    "name": "rep",
+    "link": "https://github.com/repplus/rep",
+    "type": "Proxy",
+    "tags": [
+      "http",
+      "repeater"
+    ],
+    "platforms": [
+      "chrome"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "Chrome DevTools extension for capturing, modifying, and replaying HTTP requests with AI-powered security analysis",
+    "language": "JavaScript"
+  },
+  {
+    "name": "Wayback Machine",
+    "link": "https://apps.apple.com/us/app/wayback-machine/id1472432422",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "safari"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "History of website"
+  },
+  {
+    "name": "DotGit",
+    "link": "https://github.com/davtur19/DotGit",
+    "type": "Recon",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "firefox",
+      "chrome"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "An extension for checking if .git is exposed in visited websites",
+    "language": "JavaScript"
+  },
+  {
+    "name": "Dark Reader for Safari",
+    "link": "https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "safari"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "Dark mode to any site"
+  },
+  {
+    "name": "Firefox Multi-Account Containers",
+    "link": "https://github.com/mozilla/multi-account-containers",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "firefox"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "Firefox Multi-Account Containers lets you keep parts of your online life separated into color-coded tabs",
+    "language": "JavaScript"
+  },
+  {
+    "name": "User-Agent Switcher",
+    "link": "https://addons.mozilla.org/ko/firefox/addon/user-agent-switcher-revived/",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "firefox"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "quick and easy way to switch between user-agents."
+  },
+  {
+    "name": "DOMLogger++",
+    "link": "https://github.com/kevin-mizu/domloggerpp",
+    "type": "Utils",
+    "tags": [
+      "dom",
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "firefox",
+      "chrome"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "A browser extension that allows you to monitor, intercept, and debug JavaScript sinks based on customizable configurations.",
+    "language": "JavaScript"
+  },
+  {
+    "name": "ZAP Browser Extension",
+    "link": "https://github.com/zaproxy/browser-extension/",
+    "type": "Utils",
+    "tags": [
+      "browser-record"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "firefox",
+      "chrome",
+      "zap"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "A browser extension which allows ZAP to interact directly with the browser.",
+    "language": "TypeScript"
+  },
+  {
+    "name": "Hack-Tools",
+    "link": "https://github.com/LasCC/Hack-Tools",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "firefox",
+      "chrome",
+      "safari"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "The all-in-one Red Team extension for Web Pentester 🛠",
+    "language": "TypeScript"
+  },
+  {
+    "name": "firefox-container-proxy",
+    "link": "https://github.com/bekh6ex/firefox-container-proxy",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "firefox"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "Assign a proxy to a Firefox container",
+    "language": "JavaScript"
+  },
+  {
+    "name": "Edit-This-Cookie",
+    "link": "https://github.com/ETCExtensions/Edit-This-Cookie",
+    "type": "Utils",
+    "tags": [
+      "cookie"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "chrome"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "EditThisCookie is the famous Google Chrome/Chromium extension for editing cookies",
+    "language": "JavaScript"
+  },
+  {
+    "name": "cookie-quick-manager",
+    "link": "https://github.com/ysard/cookie-quick-manager",
+    "type": "Utils",
+    "tags": [
+      "cookie"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "firefox"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "An addon to manage (view, search, create, edit, remove, backup, restore) cookies on Firefox.",
+    "language": "JavaScript"
+  },
+  {
+    "name": "jsonwebtoken.github.io",
+    "link": "https://github.com/jsonwebtoken/jsonwebtoken.github.io",
+    "type": "Utils",
+    "tags": [
+      "jwt"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "JWT En/Decode and Verify",
+    "language": "JavaScript"
+  },
+  {
+    "name": "eval_villain",
+    "link": "https://github.com/swoops/eval_villain",
+    "type": "Utils",
+    "tags": [
+      "xss"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "firefox",
+      "zap"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "A Firefox Web Extension to improve the discovery of DOM XSS.",
+    "language": "JavaScript"
+  },
+  {
+    "name": "postMessage-tracker",
+    "link": "https://github.com/fransr/postMessage-tracker",
+    "type": "Utils",
+    "tags": [
+      "js-analysis"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "chrome"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "A Chrome Extension to track postMessage usage (url, domain and stack) both by logging using CORS and also visually as an extension-icon",
+    "language": "JavaScript"
+  },
+  {
+    "name": "clear-cache",
+    "link": "https://github.com/TenSoja/clear-cache",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "firefox",
+      "chrome"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "Add-on to clear browser cache with a single click or via the F9 key.",
+    "language": "JavaScript"
+  },
+  {
+    "name": "PwnFox",
+    "link": "https://github.com/yeswehack/PwnFox",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "firefox",
+      "burp"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "Firefox/Burp extension that provide usefull tools for your security audit.",
+    "language": "JavaScript"
+  },
+  {
+    "name": "Dark Reader",
+    "link": "https://github.com/darkreader/darkreader",
+    "type": "Utils",
+    "tags": [
+      "darkmode"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "firefox",
+      "chrome"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "Dark mode to any site",
+    "language": "TypeScript"
+  },
+  {
+    "name": "MM3 ProxySwitch",
+    "link": "https://proxy-offline-browser.com/ProxySwitch/",
+    "type": "Utils",
+    "tags": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "firefox",
+      "chrome"
+    ],
+    "sourceSection": "Browser Addons",
+    "description": "Proxy Switch in Firefox and Chrome",
+    "language": "JavaScript"
+  }
+]

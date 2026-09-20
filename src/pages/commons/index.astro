@@ -1,0 +1,1100 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCommonsEntries } from "@/lib/commons";
+
+// Facets are computed here, at build time, from the full collection —
+// cheap even at hundreds of entries, and lets the filter chrome render
+// server-side with real values (no flash-of-empty-filters). The actual
+// row data is NOT rendered into this page's HTML — see /commons-data.json
+// and the client script below for why.
+const entries = await getCommonsEntries();
+const total = entries.length;
+
+const types = [...new Set(entries.map((e) => e.type))].sort();
+const sources = [...new Set(entries.map((e) => e.sourceSection))].sort();
+const languages = [...new Set(entries.map((e) => e.language).filter(Boolean))].sort() as string[];
+const platforms = [...new Set(entries.flatMap((e) => e.platforms))].sort();
+
+const tagCounts = new Map<string, number>();
+for (const e of entries) {
+  for (const t of e.tags) tagCounts.set(t, (tagCounts.get(t) ?? 0) + 1);
+}
+const topTags = [...tagCounts.entries()]
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 24)
+  .map(([tag]) => tag)
+  .sort();
+
+const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+const availableLetters = new Set(
+  entries.map((e) => e.name.trim()[0]?.toLowerCase()).filter(Boolean)
+);
+
+const dataEndpoint = `${import.meta.env.BASE_URL}commons-data.json`.replace(/\/+/g, "/");
+---
+
+<BaseLayout
+  title="security commons"
+  description={`A shared, searchable index of ${total} security tools, extensions, and references assembled from public projects — not software I wrote.`}
+>
+  <section class="section section--first">
+    <div class="wrap wrap--wide">
+      <h1 data-intro>security commons</h1>
+      <p class="hero__subtitle text-secondary" data-intro style="animation-delay: 80ms;">
+        tools, extensions, references, and other things the security world
+        keeps around.
+      </p>
+      <p class="hero__credit meta" data-intro style="animation-delay: 160ms;">
+        assembled from the{" "}
+        <a href="https://github.com/hahwul/WebHackersWeapons" class="link" target="_blank" rel="noopener noreferrer">
+          WebHackersWeapons
+        </a>{" "}
+        project — i'm curating this, not claiming authorship. credit belongs
+        to each project's own author, linked from every entry.
+      </p>
+    </div>
+  </section>
+
+  {
+    total === 0 ? (
+      <section class="section">
+        <div class="wrap wrap--wide empty-top">
+          <p class="text-secondary">this collection is still being assembled.</p>
+          <p class="text-secondary">
+            nothing indexed yet — check back soon, or see{" "}
+            <a href="/notes/" class="link">
+              notes
+            </a>{" "}
+            for anything in progress.
+          </p>
+        </div>
+      </section>
+    ) : (
+      <section class="section commons-app" id="commons-app" data-endpoint={dataEndpoint}>
+        <div class="wrap wrap--wide">
+          <p class="catalogue-count meta" id="commons-count" aria-live="polite">
+            {total} entries
+          </p>
+
+          <div class="sticky-sentinel" id="commons-sticky-sentinel" aria-hidden="true"></div>
+
+          <div class="controls-sticky" id="commons-sticky">
+            <div class="controls-sticky__inner">
+              <div class="search-shell">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <label for="commons-search" class="visually-hidden">
+                  Search the commons
+                </label>
+                <input
+                  type="search"
+                  id="commons-search"
+                  class="search-input"
+                  placeholder="search by name, description, tag…"
+                  autocomplete="off"
+                  spellcheck="false"
+                />
+                <kbd class="search-hint" aria-hidden="true">/</kbd>
+              </div>
+
+              <nav class="letter-index" aria-label="Jump to letter">
+                {alphabet.map((letter) => (
+                  <button
+                    type="button"
+                    class="letter"
+                    data-jump-letter={letter}
+                    aria-label={`Jump to entries starting with ${letter}`}
+                    disabled={!availableLetters.has(letter)}
+                  >
+                    {letter}
+                  </button>
+                ))}
+              </nav>
+            </div>
+          </div>
+
+          <div class="controls-row">
+            <div class="type-row" role="group" aria-label="Filter by type">
+              <button type="button" class="type-pill" data-filter-type="all" aria-pressed="true">
+                all
+              </button>
+              {types.map((type) => (
+                <button type="button" class="type-pill" data-filter-type={type} aria-pressed="false">
+                  {type}
+                </button>
+              ))}
+            </div>
+
+            <details class="filters-panel">
+              <summary>filters +</summary>
+              <div class="filters-panel__body">
+                {sources.length > 1 && (
+                  <div class="filters-group">
+                    <p class="filters-group__label meta">source</p>
+                    <div class="filter-row" role="group" aria-label="Filter by source section">
+                      {sources.map((source) => (
+                        <button type="button" class="chip" data-filter-source={source} aria-pressed="false">
+                          {source}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {languages.length > 0 && (
+                  <div class="filters-group">
+                    <p class="filters-group__label meta">language</p>
+                    <select id="commons-lang" class="select" aria-label="Filter by language">
+                      <option value="all">any language</option>
+                      {languages.map((lang) => (
+                        <option value={lang}>{lang}</option>
+                      ))}
+                    </select>
+                  </div>
+                )}
+
+                {platforms.length > 0 && (
+                  <div class="filters-group">
+                    <p class="filters-group__label meta">platform</p>
+                    <select id="commons-platform" class="select" aria-label="Filter by platform">
+                      <option value="all">any platform</option>
+                      {platforms.map((platform) => (
+                        <option value={platform}>{platform}</option>
+                      ))}
+                    </select>
+                  </div>
+                )}
+
+                {topTags.length > 0 && (
+                  <div class="filters-group">
+                    <p class="filters-group__label meta">tags</p>
+                    <div class="filter-row filter-row--tags" role="group" aria-label="Filter by tag">
+                      {topTags.map((tag) => (
+                        <button type="button" class="chip" data-filter-tag={tag} aria-pressed="false">
+                          #{tag}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </details>
+          </div>
+
+          <p class="meta active-filters" id="commons-active-filters" hidden>
+            <span id="commons-active-filters-text"></span>
+            <button type="button" class="reset js-commons-reset" id="commons-reset">
+              reset
+            </button>
+          </p>
+        </div>
+
+        <div class="wrap wrap--wide">
+          <p class="meta loading-state" id="commons-loading">loading the collection…</p>
+
+          <p class="meta empty-results" id="commons-empty" hidden>
+            nothing found.
+            <br />
+            try a different name, tag, or{" "}
+            <button type="button" class="link js-commons-reset">
+              clear the filters
+            </button>.
+          </p>
+
+          <ul class="entries" id="commons-results" hidden></ul>
+
+          <button type="button" class="load-more" id="commons-load-more" hidden>
+            show more
+          </button>
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>
+
+{
+  total > 0 && (
+    <script>
+      const app = document.getElementById("commons-app") as HTMLElement;
+      if (app) {
+        const endpoint = app.dataset.endpoint || "/commons-data.json";
+
+        const searchInput = document.getElementById("commons-search") as HTMLInputElement;
+        const resultCount = document.getElementById("commons-count") as HTMLElement;
+        const resultsList = document.getElementById("commons-results") as HTMLUListElement;
+        const loadingState = document.getElementById("commons-loading") as HTMLElement;
+        const emptyState = document.getElementById("commons-empty") as HTMLElement;
+        const loadMoreBtn = document.getElementById("commons-load-more") as HTMLButtonElement;
+        const resetBtns = document.querySelectorAll(".js-commons-reset");
+        const typePills = document.querySelectorAll<HTMLButtonElement>("[data-filter-type]");
+        const sourcePills = document.querySelectorAll<HTMLButtonElement>("[data-filter-source]");
+        const tagChips = document.querySelectorAll<HTMLButtonElement>("[data-filter-tag]");
+        const langSelect = document.getElementById("commons-lang") as HTMLSelectElement | null;
+        const platformSelect = document.getElementById("commons-platform") as HTMLSelectElement | null;
+        const activeFiltersEl = document.getElementById("commons-active-filters") as HTMLElement;
+        const activeFiltersText = document.getElementById("commons-active-filters-text") as HTMLElement;
+        const letterBtns = document.querySelectorAll<HTMLButtonElement>("[data-jump-letter]");
+        const stickyBar = document.getElementById("commons-sticky") as HTMLElement | null;
+        const stickySentinel = document.getElementById("commons-sticky-sentinel") as HTMLElement | null;
+        const filtersPanel = document.querySelector("details.filters-panel") as HTMLDetailsElement | null;
+
+        type Entry = {
+          id: string;
+          name: string;
+          link: string;
+          description?: string;
+          type: string;
+          tags: string[];
+          language?: string;
+          platforms: string[];
+          sourceSection: string;
+        };
+
+        let entries: Entry[] = [];
+        let filtered: Entry[] = [];
+        let shown = 0;
+        const BATCH = 60;
+
+        const state = { q: "", type: "all", source: "all", lang: "all", platform: "all", tag: "all" };
+
+        function readStateFromURL() {
+          const params = new URLSearchParams(location.search);
+          state.q = params.get("q") ?? "";
+          state.type = params.get("type") ?? "all";
+          state.source = params.get("source") ?? "all";
+          state.lang = params.get("lang") ?? "all";
+          state.platform = params.get("platform") ?? "all";
+          state.tag = params.get("tag") ?? "all";
+        }
+
+        function writeStateToURL() {
+          const params = new URLSearchParams();
+          if (state.q) params.set("q", state.q);
+          if (state.type !== "all") params.set("type", state.type);
+          if (state.source !== "all") params.set("source", state.source);
+          if (state.lang !== "all") params.set("lang", state.lang);
+          if (state.platform !== "all") params.set("platform", state.platform);
+          if (state.tag !== "all") params.set("tag", state.tag);
+          const qs = params.toString();
+          history.replaceState(null, "", qs ? `${location.pathname}?${qs}` : location.pathname);
+        }
+
+        function matches(entry: Entry) {
+          if (state.type !== "all" && entry.type !== state.type) return false;
+          if (state.source !== "all" && entry.sourceSection !== state.source) return false;
+          if (state.lang !== "all" && entry.language !== state.lang) return false;
+          if (state.platform !== "all" && !entry.platforms.includes(state.platform)) return false;
+          if (state.tag !== "all" && !entry.tags.includes(state.tag)) return false;
+          if (state.q) {
+            const q = state.q.toLowerCase();
+            const haystack = `${entry.name} ${entry.description ?? ""} ${entry.tags.join(" ")} ${entry.type} ${entry.language ?? ""}`.toLowerCase();
+            if (!haystack.includes(q)) return false;
+          }
+          return true;
+        }
+
+        function formatCount(shownCount: number, totalCount: number) {
+          return shownCount === totalCount ? `${totalCount} entries` : `${shownCount} of ${totalCount}`;
+        }
+
+        function buildRow(entry: Entry): HTMLLIElement {
+          const li = document.createElement("li");
+          li.className = "entry";
+          li.dataset.id = entry.id;
+
+          const a = document.createElement("a");
+          a.className = "entry__link";
+          a.href = entry.link;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+
+          const heading = document.createElement("div");
+          heading.className = "entry__heading";
+
+          const name = document.createElement("span");
+          name.className = "entry__name";
+          name.textContent = entry.name;
+          heading.appendChild(name);
+
+          if (entry.language) {
+            const lang = document.createElement("span");
+            lang.className = "entry__lang mono";
+            lang.textContent = entry.language;
+            heading.appendChild(lang);
+          }
+
+          a.appendChild(heading);
+
+          if (entry.description) {
+            const desc = document.createElement("p");
+            desc.className = "entry__desc";
+            desc.textContent = entry.description;
+            a.appendChild(desc);
+          }
+
+          const footer = document.createElement("div");
+          footer.className = "entry__footer";
+
+          const meta = document.createElement("p");
+          meta.className = "entry__meta mono";
+          meta.textContent = [entry.type, ...entry.tags].filter(Boolean).join(" · ");
+          footer.appendChild(meta);
+
+          const arrow = document.createElement("span");
+          arrow.className = "entry__arrow";
+          arrow.setAttribute("aria-hidden", "true");
+          arrow.textContent = "↗";
+          footer.appendChild(arrow);
+
+          a.appendChild(footer);
+
+          li.appendChild(a);
+          return li;
+        }
+
+        function renderNextBatch() {
+          const slice = filtered.slice(shown, shown + BATCH);
+          const fragment = document.createDocumentFragment();
+          for (const entry of slice) fragment.appendChild(buildRow(entry));
+          resultsList.appendChild(fragment);
+          shown += slice.length;
+
+          const remaining = filtered.length - shown;
+          loadMoreBtn.hidden = remaining <= 0;
+          if (remaining > 0) {
+            loadMoreBtn.textContent = `show ${Math.min(BATCH, remaining)} more (${remaining} remaining)`;
+          }
+        }
+
+        let renderTimer: ReturnType<typeof setTimeout>;
+        function applyFilters() {
+          clearTimeout(renderTimer);
+          resultsList.classList.add("is-updating");
+          renderTimer = setTimeout(() => {
+            filtered = entries.filter(matches);
+            shown = 0;
+            resultsList.innerHTML = "";
+            renderNextBatch();
+
+            resultCount.textContent = formatCount(filtered.length, entries.length);
+            emptyState.hidden = filtered.length !== 0;
+            resultsList.hidden = filtered.length === 0;
+            resultsList.classList.remove("is-updating");
+            updateActiveUI();
+          }, 80);
+        }
+
+        function updateActiveUI() {
+          typePills.forEach((pill) => {
+            const active = pill.dataset.filterType === state.type;
+            pill.classList.toggle("is-active", active);
+            pill.setAttribute("aria-pressed", String(active));
+          });
+          sourcePills.forEach((pill) => {
+            const active = pill.dataset.filterSource === state.source;
+            pill.classList.toggle("is-active", active);
+            pill.setAttribute("aria-pressed", String(active));
+          });
+          tagChips.forEach((chip) => {
+            const active = chip.dataset.filterTag === state.tag;
+            chip.classList.toggle("is-active", active);
+            chip.setAttribute("aria-pressed", String(active));
+          });
+          if (langSelect) langSelect.value = state.lang;
+          if (platformSelect) platformSelect.value = state.platform;
+
+          const active: string[] = [];
+          if (state.type !== "all") active.push(state.type);
+          if (state.source !== "all") active.push(state.source);
+          if (state.lang !== "all") active.push(state.lang);
+          if (state.platform !== "all") active.push(state.platform);
+          if (state.tag !== "all") active.push(`#${state.tag}`);
+          if (state.q) active.push(`"${state.q}"`);
+
+          if (active.length) {
+            activeFiltersText.textContent = active.join(" · ");
+            activeFiltersEl.hidden = false;
+          } else {
+            activeFiltersEl.hidden = true;
+          }
+        }
+
+        searchInput.addEventListener("input", (e) => {
+          state.q = (e.target as HTMLInputElement).value;
+          writeStateToURL();
+          applyFilters();
+        });
+
+        typePills.forEach((pill) => {
+          pill.addEventListener("click", () => {
+            state.type = pill.dataset.filterType ?? "all";
+            writeStateToURL();
+            applyFilters();
+          });
+        });
+
+        sourcePills.forEach((pill) => {
+          pill.addEventListener("click", () => {
+            state.source = state.source === pill.dataset.filterSource ? "all" : (pill.dataset.filterSource ?? "all");
+            writeStateToURL();
+            applyFilters();
+          });
+        });
+
+        tagChips.forEach((chip) => {
+          chip.addEventListener("click", () => {
+            state.tag = state.tag === chip.dataset.filterTag ? "all" : (chip.dataset.filterTag ?? "all");
+            writeStateToURL();
+            applyFilters();
+          });
+        });
+
+        langSelect?.addEventListener("change", (e) => {
+          state.lang = (e.target as HTMLSelectElement).value;
+          writeStateToURL();
+          applyFilters();
+        });
+
+        platformSelect?.addEventListener("change", (e) => {
+          state.platform = (e.target as HTMLSelectElement).value;
+          writeStateToURL();
+          applyFilters();
+        });
+
+        resetBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            state.q = "";
+            state.type = "all";
+            state.source = "all";
+            state.lang = "all";
+            state.platform = "all";
+            state.tag = "all";
+            searchInput.value = "";
+            writeStateToURL();
+            applyFilters();
+            searchInput.focus();
+          });
+        });
+
+        loadMoreBtn.addEventListener("click", () => renderNextBatch());
+
+        letterBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const letter = btn.dataset.jumpLetter;
+            const targetIndex = filtered.findIndex((e) => e.name.trim().toLowerCase().startsWith(letter as string));
+            if (targetIndex === -1) return;
+            while (shown <= targetIndex && shown < filtered.length) renderNextBatch();
+            const target = filtered[targetIndex];
+            const row = resultsList.querySelector(`[data-id="${CSS.escape(target.id)}"]`) as HTMLElement | null;
+            if (row) {
+              row.scrollIntoView({ behavior: "smooth", block: "center" });
+              row.classList.add("is-jumped");
+              setTimeout(() => row.classList.remove("is-jumped"), 900);
+            }
+          });
+        });
+
+        document.addEventListener("keydown", (e) => {
+          const active = document.activeElement;
+          const isTyping = active instanceof HTMLInputElement || active instanceof HTMLTextAreaElement;
+          if ((e.key === "/" && !isTyping) || ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k")) {
+            e.preventDefault();
+            searchInput.focus();
+            searchInput.select();
+          }
+          if (e.key === "Escape") {
+            if (active === searchInput) searchInput.blur();
+            if (filtersPanel?.open) filtersPanel.open = false;
+          }
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!filtersPanel || !filtersPanel.open) return;
+          if (!(e.target instanceof Node)) return;
+          if (!filtersPanel.contains(e.target)) filtersPanel.open = false;
+        });
+
+        if (stickyBar && stickySentinel && "IntersectionObserver" in window) {
+          const stuckObserver = new IntersectionObserver(
+            ([entry]) => stickyBar.classList.toggle("is-stuck", entry.intersectionRatio < 1),
+            { threshold: [1] }
+          );
+          stuckObserver.observe(stickySentinel);
+        }
+
+        readStateFromURL();
+        searchInput.value = state.q;
+
+        if (filtersPanel && (state.source !== "all" || state.lang !== "all" || state.platform !== "all" || state.tag !== "all")) {
+          filtersPanel.open = true;
+        }
+
+        // The prebuilt static index — fetched once, filtered/rendered
+        // entirely in memory from here on. No further network requests,
+        // no third-party APIs, no page reload.
+        fetch(endpoint)
+          .then((res) => res.json())
+          .then((data: Entry[]) => {
+            entries = data;
+            loadingState.hidden = true;
+            resultsList.hidden = false;
+            applyFilters();
+          })
+          .catch(() => {
+            loadingState.textContent = "couldn't load the collection — try refreshing.";
+          });
+      }
+    </script>
+  )
+}
+
+<style>
+  .section--first {
+    padding-top: clamp(3rem, 8vw, 5rem);
+    padding-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  }
+
+  .hero__subtitle {
+    margin-top: 0.6rem;
+    font-size: 1.05rem;
+    max-width: var(--measure);
+  }
+
+  .hero__credit {
+    margin-top: 1rem;
+    max-width: var(--measure);
+    line-height: 1.6;
+  }
+
+  .empty-top {
+    padding-block: 1rem 2rem;
+  }
+
+  /* --- entry count ----------------------------------------------------- */
+  .catalogue-count {
+    margin-bottom: 0.9rem;
+  }
+
+  /* --- sticky search + letter index ------------------------------------ */
+  .sticky-sentinel {
+    height: 1px;
+  }
+
+  .controls-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg);
+    padding-block: 0.15rem 1rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+  }
+
+  .controls-sticky.is-stuck {
+    border-bottom-color: var(--border-soft);
+    box-shadow: 0 12px 24px -18px rgba(0, 0, 0, 0.7);
+  }
+
+  .controls-sticky__inner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .search-shell {
+    flex: 1 1 18rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding-inline: 1rem;
+    transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+  }
+
+  .search-shell:focus-within {
+    border-color: var(--accent-dim);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+
+  .search-icon {
+    color: var(--text-tertiary);
+    font-size: 1.05rem;
+    flex-shrink: 0;
+  }
+
+  .search-input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    padding-block: 0.85rem;
+  }
+
+  .search-input:focus {
+    outline: none;
+  }
+
+  .search-input::placeholder {
+    color: var(--text-tertiary);
+  }
+
+  .search-input::-webkit-search-cancel-button {
+    filter: invert(0.6);
+  }
+
+  .search-hint {
+    flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.15em 0.45em;
+    line-height: 1;
+  }
+
+  @media (max-width: 30rem) {
+    .search-hint {
+      display: none;
+    }
+  }
+
+  /* --- alphabet index ---------------------------------------------------- */
+  .letter-index {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.1rem;
+    flex: 0 1 auto;
+    max-width: 100%;
+    scrollbar-width: none;
+  }
+
+  .letter-index::-webkit-scrollbar {
+    display: none;
+  }
+
+  .letter {
+    flex: 0 0 auto;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    background: none;
+    border: none;
+    color: var(--text-tertiary);
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+  }
+
+  .letter:hover:not(:disabled) {
+    color: var(--accent);
+    background: var(--bg-elevated);
+  }
+
+  .letter:disabled {
+    color: var(--border);
+    cursor: default;
+  }
+
+  /* --- type row + filters popover ---------------------------------------- */
+  .controls-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .type-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem 1rem;
+    align-items: baseline;
+    max-width: 100%;
+  }
+
+  .type-pill {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    text-transform: lowercase;
+    background: none;
+    border: none;
+    padding: 0 0 0.2em;
+    margin: 0;
+    color: var(--text-secondary);
+    position: relative;
+    cursor: pointer;
+  }
+
+  .type-pill::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur-base) var(--ease-physical);
+  }
+
+  .type-pill:hover {
+    color: var(--text);
+  }
+
+  .type-pill:hover::after {
+    transform: scaleX(0.6);
+  }
+
+  .type-pill.is-active {
+    color: var(--accent);
+  }
+
+  .type-pill.is-active::after {
+    transform: scaleX(1);
+  }
+
+  .filters-panel {
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .filters-panel > summary {
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-tertiary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+
+  .filters-panel > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .filters-panel > summary::before {
+    content: "+";
+    display: inline-block;
+    width: 1em;
+    transition: transform var(--dur-base) var(--ease-physical);
+  }
+
+  .filters-panel[open] > summary::before {
+    transform: rotate(45deg);
+  }
+
+  .filters-panel > summary:hover {
+    color: var(--text-secondary);
+  }
+
+  .filters-panel__body {
+    position: absolute;
+    top: calc(100% + 0.65rem);
+    right: 0;
+    z-index: 30;
+    min-width: 18rem;
+    max-width: 22rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.2rem 1.25rem;
+    box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.55);
+  }
+
+  @media (max-width: 40rem) {
+    .filters-panel__body {
+      position: static;
+      margin-top: 0.85rem;
+      width: 100%;
+      max-width: none;
+      box-shadow: none;
+    }
+  }
+
+  .filters-group + .filters-group {
+    margin-top: 0.95rem;
+  }
+
+  .filters-group__label {
+    margin: 0 0 0.4rem;
+  }
+
+  .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .filter-row--tags {
+    gap: 0.35rem;
+  }
+
+  .chip {
+    font-family: var(--font-mono);
+    font-size: 0.73rem;
+    background: transparent;
+    color: var(--text-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.32em 0.7em;
+    cursor: pointer;
+    transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+  }
+
+  .chip:hover {
+    color: var(--text);
+    border-color: var(--text-tertiary);
+  }
+
+  .chip.is-active {
+    color: var(--accent);
+    border-color: var(--accent-dim);
+    background: var(--accent-soft);
+  }
+
+  .select {
+    width: 100%;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    background: var(--bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.45em 0.6em;
+  }
+
+  /* --- active filters / reset --------------------------------------------- */
+  .active-filters {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+
+  .reset {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    background: none;
+    border: none;
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  /* --- results ------------------------------------------------------------ */
+  .loading-state,
+  .empty-results {
+    padding-block: 2rem;
+  }
+
+  .entries {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    transition: opacity 140ms var(--ease-out);
+  }
+
+  .entries.is-updating {
+    opacity: 0.35;
+  }
+
+  /* NOTE: every rule below that touches .entry / .entry__* is wrapped in
+     :global(). These rows are built by the client <script> at runtime
+     (document.createElement), not by Astro's own renderer, so none of
+     them ever receive Astro's scoping attribute — a plain (scoped)
+     selector would silently fail to match them. This was very likely
+     the real cause of the old "name/language collide" layout bug: the
+     flex rule that was supposed to separate them never actually applied. */
+  :global(.entry) {
+    border-top: 1px solid var(--border-soft);
+    transition: border-color var(--dur-base) var(--ease-out);
+  }
+
+  :global(.entry:has(.entry__link:hover)),
+  :global(.entry:has(.entry__link:focus-visible)) {
+    border-top-color: var(--border);
+  }
+
+  :global(.entry:last-child) {
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  :global(.entry__link) {
+    display: block;
+    text-decoration: none;
+    color: var(--text);
+    padding-block: 1.3rem;
+    position: relative;
+    padding-left: 0.9rem;
+    transition: padding-left var(--dur-base) var(--ease-physical);
+  }
+
+  :global(.entry__link::before) {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.3rem;
+    bottom: 0.3rem;
+    width: 2px;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform var(--dur-base) var(--ease-physical);
+  }
+
+  :global(.entry__link:hover),
+  :global(.entry__link:focus-visible) {
+    padding-left: 1.3rem;
+  }
+
+  :global(.entry__link:hover::before),
+  :global(.entry__link:focus-visible::before) {
+    transform: scaleY(1);
+  }
+
+  :global(.entry.is-jumped .entry__link::before) {
+    transform: scaleY(1);
+    background: var(--text);
+  }
+
+  :global(.entry__heading) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    row-gap: 0.15rem;
+    column-gap: 1rem;
+  }
+
+  :global(.entry__name) {
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    font-variation-settings: "opsz" 18;
+    letter-spacing: -0.005em;
+  }
+
+  :global(.entry__lang) {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  :global(.entry__desc) {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin: 0.4rem 0 0;
+    max-width: var(--measure);
+    color: var(--text-secondary);
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+
+  :global(.entry__link:hover .entry__desc),
+  :global(.entry__link:focus-visible .entry__desc) {
+    color: var(--text);
+  }
+
+  :global(.entry__footer) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: 0.6rem;
+  }
+
+  :global(.entry__meta) {
+    margin: 0;
+    min-width: 0;
+    text-transform: lowercase;
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+
+  :global(.entry__link:hover .entry__meta),
+  :global(.entry__link:focus-visible .entry__meta) {
+    color: var(--text-secondary);
+  }
+
+  :global(.entry__arrow) {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    display: inline-block;
+    transition: transform var(--dur-fast) var(--ease-physical), color var(--dur-fast) var(--ease-out);
+  }
+
+  :global(.entry__link:hover .entry__arrow),
+  :global(.entry__link:focus-visible .entry__arrow) {
+    transform: translate(3px, -3px);
+    color: var(--accent);
+  }
+
+  .load-more {
+    display: block;
+    position: relative;
+    margin: 2.5rem auto 0;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0 0 0.25em;
+  }
+
+  .load-more::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--text-tertiary);
+    transform: scaleX(0.3);
+    transform-origin: center;
+    transition: transform var(--dur-base) var(--ease-physical), background var(--dur-base) var(--ease-out);
+  }
+
+  .load-more:hover {
+    color: var(--accent);
+  }
+
+  .load-more:hover::after {
+    transform: scaleX(1);
+    background: var(--accent);
+  }
+
+  @media (max-width: 40rem) {
+    :global(.entry__link) {
+      padding-block: 1.05rem;
+    }
+
+    :global(.entry__name) {
+      font-size: 1.02rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .controls-sticky {
+      transition: none;
+    }
+  }
+</style>

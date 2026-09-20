@@ -1,0 +1,102 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const notes = (await getCollection("notes", (n) => !n.data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const dateFmt = new Intl.DateTimeFormat("en-US", {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+});
+---
+
+<BaseLayout
+  title="notes"
+  description="Notes on security research, tools, and things worth remembering. Currently empty — on purpose."
+>
+  <section class="section section--first">
+    <div class="wrap">
+      <h1 data-intro>notes</h1>
+
+      {
+        notes.length === 0 ? (
+          <div class="empty" data-reveal-group>
+            <p class="text-secondary">nothing here yet.</p>
+            <p class="text-secondary">that's not a bug.</p>
+            <p>
+              when something is worth writing down — a bug that turned into
+              a lesson, a rabbit hole that ate a weekend, a question that
+              wouldn't leave me alone — it'll show up here.
+            </p>
+            <p class="meta">check back later, or subscribe via <a href="/rss.xml" class="link">rss</a>.</p>
+          </div>
+        ) : (
+          <ul class="notes-list" data-reveal-group>
+            {notes.map((note) => (
+              <li class="notes-list__item">
+                <a href={`/notes/${note.id}/`} class="notes-list__link">
+                  <span class="notes-list__title">{note.data.title}</span>
+                  {note.data.summary && (
+                    <span class="notes-list__summary text-secondary">
+                      {note.data.summary}
+                    </span>
+                  )}
+                  <span class="meta">{dateFmt.format(note.data.date)}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .section--first {
+    padding-top: clamp(3rem, 8vw, 5rem);
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin-bottom: 2rem;
+  }
+
+  .empty p {
+    max-width: var(--measure);
+  }
+
+  .notes-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--border-soft);
+  }
+
+  .notes-list__item {
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .notes-list__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding-block: 1.5rem;
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  .notes-list__title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+
+  .notes-list__link:hover .notes-list__title,
+  .notes-list__link:focus-visible .notes-list__title {
+    color: var(--accent);
+  }
+</style>

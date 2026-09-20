@@ -1,0 +1,59 @@
+---
+import { LINKS } from "@/lib/site";
+
+const year = new Date().getFullYear();
+
+const elsewhere = [
+  { label: "github", href: LINKS.github },
+  { label: "linkedin", href: LINKS.linkedin },
+  { label: "portfolio", href: LINKS.portfolio },
+];
+---
+
+<footer class="footer">
+  <div class="wrap footer__row">
+    <p class="meta">
+      this site will probably look different later. that's fine — © {year}
+    </p>
+    <ul class="footer__links">
+      {
+        elsewhere.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="link meta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {item.label}
+              <span class="link__arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding-block: 2.5rem;
+    border-top: 1px solid var(--border-soft);
+  }
+
+  .footer__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer__links {
+    display: flex;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>

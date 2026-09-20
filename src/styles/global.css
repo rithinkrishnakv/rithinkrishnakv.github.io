@@ -1,0 +1,351 @@
+/* ---------------------------------------------------------------------- */
+/* Design tokens                                                          */
+/* ---------------------------------------------------------------------- */
+:root {
+  --bg: #0b0b0c;
+  --bg-elevated: #141416;
+  --border: #232327;
+  --border-soft: #1a1a1c;
+
+  --text: #efece5;
+  --text-secondary: #98948c;
+  --text-tertiary: #605c56;
+
+  /* Muted clay/terracotta — closer to an ink stamp than a highlighter. */
+  --accent: #c17a49;
+  --accent-dim: #8f5a35;
+  --accent-soft: rgba(193, 122, 73, 0.12);
+
+  /* Editorial display serif + a contemporary, highly legible body sans,
+     with a restrained slab mono reserved for metadata only. */
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-body: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --measure: 40rem;
+  --measure-wide: 56rem;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-physical: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 160ms;
+  --dur-base: 280ms;
+  --dur-slow: 520ms;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Reset                                                                  */
+/* ---------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  letter-spacing: 0.005em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-optical-sizing: auto;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Visible, deliberate focus states everywhere */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Typography                                                             */
+/* ---------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin: 0;
+  font-variation-settings: "opsz" 40;
+}
+
+h3,
+h4 {
+  font-variation-settings: "opsz" 18;
+}
+
+em,
+.italic {
+  font-style: italic;
+  font-variation-settings: "opsz" 12;
+}
+
+.meta,
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  color: var(--text-tertiary);
+  text-transform: none;
+}
+
+p {
+  margin: 0 0 1.25em;
+  max-width: var(--measure);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Layout helpers                                                         */
+/* ---------------------------------------------------------------------- */
+.wrap {
+  width: 100%;
+  max-width: 46rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.wrap--wide {
+  max-width: 60rem;
+}
+
+.section {
+  padding-block: clamp(3rem, 8vw, 6rem);
+}
+
+.section + .section {
+  border-top: 1px solid var(--border-soft);
+}
+
+.hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Links with a deliberate, restrained hover treatment                    */
+/* An underline that grows from the left, plus a small directional shift  */
+/* for links marked as external.                                         */
+/* ---------------------------------------------------------------------- */
+.link {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+  color: var(--text);
+  text-decoration: none;
+  padding-bottom: 0.1em;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--text-tertiary);
+  transform: scaleX(0.28);
+  transform-origin: left;
+  transition: transform var(--dur-base) var(--ease-physical), background var(--dur-base) var(--ease-out);
+}
+
+.link:hover::after,
+.link:focus-visible::after {
+  transform: scaleX(1);
+  background: var(--accent);
+}
+
+.link__arrow {
+  display: inline-block;
+  transition: transform var(--dur-fast) var(--ease-physical);
+}
+
+.link:hover .link__arrow,
+.link:focus-visible .link__arrow {
+  transform: translate(3px, -3px);
+}
+
+.link--accent {
+  color: var(--accent);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Line-reveal utility                                                    */
+/* A thin rule draws left-to-right, then its following content settles —  */
+/* used above section headings as a variant to the fade-up used elsewhere.*/
+/* ---------------------------------------------------------------------- */
+[data-reveal-line] {
+  border: none;
+  border-top: 1px solid var(--border);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+
+[data-reveal-line].is-visible {
+  transform: scaleX(1);
+}
+
+[data-reveal-line] + * {
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-out);
+  transition-delay: 120ms;
+}
+
+[data-reveal-line].is-visible + * {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Scroll-reveal utility                                                  */
+/* Elements start slightly lower, blurred and transparent, then settle.   */
+/* Toggled by IntersectionObserver in Layout's inline script.             */
+/* ---------------------------------------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  filter: blur(4px);
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out),
+    filter var(--dur-slow) var(--ease-out);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Staggered children within a revealed group */
+[data-reveal-group] > * {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+
+[data-reveal-group].is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal-group].is-visible > *:nth-child(1) { transition-delay: 0ms; }
+[data-reveal-group].is-visible > *:nth-child(2) { transition-delay: 60ms; }
+[data-reveal-group].is-visible > *:nth-child(3) { transition-delay: 120ms; }
+[data-reveal-group].is-visible > *:nth-child(4) { transition-delay: 180ms; }
+[data-reveal-group].is-visible > *:nth-child(5) { transition-delay: 240ms; }
+[data-reveal-group].is-visible > *:nth-child(6) { transition-delay: 300ms; }
+
+/* Initial page-load sequence (hero only) */
+[data-intro] {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: intro-in var(--dur-slow) var(--ease-out) forwards;
+}
+
+@keyframes intro-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Reduced motion                                                         */
+/* ---------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-reveal],
+  [data-reveal-group] > *,
+  [data-reveal-line],
+  [data-reveal-line] + *,
+  [data-intro] {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .entries.is-updating,
+  .entry {
+    transition: none !important;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Visually hidden (screen-reader only) utility                          */
+/* ---------------------------------------------------------------------- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Skip link (keyboard accessibility)                                     */
+/* ---------------------------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.6em 1em;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  z-index: 100;
+  transition: top var(--dur-fast) var(--ease-out);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
