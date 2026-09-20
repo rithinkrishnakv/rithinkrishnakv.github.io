@@ -17,5 +17,5 @@ export const LINKS = {
   linkedin: "https://www.linkedin.com/in/rithin-krishna-k-v-15593b381/",
   twitter: "https://x.com/R1thin",
   // TODO: replace with a real address (or a contact form link) before deploying
-  email: "rithinkrishna@proton.me",
+  email: "261096925+rithinkrishnakv@users.noreply.github.com",
 };
