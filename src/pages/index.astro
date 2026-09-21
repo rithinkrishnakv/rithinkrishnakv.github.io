@@ -20,10 +20,10 @@ const primaryLinks = [
 
 <BaseLayout title={SITE.name}>
   <section class="hero wrap">
-    <p class="meta" data-intro style="animation-delay: 0ms;">{SITE.role}</p>
+    <p class="meta text-accent-alt" data-intro style="animation-delay: 0ms;">{SITE.role}</p>
     <h1 data-intro style="animation-delay: 80ms;">{SITE.name}</h1>
 
-    <div class="hero__copy" data-intro style="animation-delay: 200ms;">
+    <div class="hero__copy" data-intro-group>
       <p>I like taking things apart.</p>
       <p>
         Sometimes that's a web application. Sometimes it's an API, a security
@@ -104,7 +104,7 @@ const primaryLinks = [
       </p>
       {
         commonsCount > 0 && (
-          <p class="meta categories">{commonsCount} entries, searchable</p>
+          <p class="meta categories text-accent-alt">{commonsCount} entries, searchable</p>
         )
       }
       <a href="/commons/" class="link link--accent">
@@ -175,6 +175,20 @@ const primaryLinks = [
 <style>
   .hero {
     padding-block: clamp(3.5rem, 10vw, 7rem) clamp(2.5rem, 6vw, 4rem);
+    position: relative;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(ellipse at top center, rgba(99, 132, 255, 0.04), transparent 60%);
+    pointer-events: none;
+    z-index: -1;
   }
 
   .hero h1 {

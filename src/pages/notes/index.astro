@@ -85,6 +85,12 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
     padding-block: 1.5rem;
     text-decoration: none;
     color: var(--text);
+    transition: transform var(--dur-base) var(--ease-physical);
+  }
+
+  .notes-list__link:hover,
+  .notes-list__link:focus-visible {
+    transform: translateX(4px);
   }
 
   .notes-list__title {

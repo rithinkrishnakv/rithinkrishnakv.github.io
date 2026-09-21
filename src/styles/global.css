@@ -2,19 +2,23 @@
 /* Design tokens                                                          */
 /* ---------------------------------------------------------------------- */
 :root {
-  --bg: #0b0b0c;
-  --bg-elevated: #141416;
-  --border: #232327;
-  --border-soft: #1a1a1c;
+  --bg: #090B10;
+  --bg-elevated: #10131A;
+  --border: #1D2230;
+  --border-soft: #141824;
 
-  --text: #efece5;
-  --text-secondary: #98948c;
-  --text-tertiary: #605c56;
+  --text: #F2EFE8;
+  --text-secondary: #9EA4AF;
+  --text-tertiary: #646D82;
 
-  /* Muted clay/terracotta — closer to an ink stamp than a highlighter. */
-  --accent: #c17a49;
-  --accent-dim: #8f5a35;
-  --accent-soft: rgba(193, 122, 73, 0.12);
+  /* Cobalt accent for interaction */
+  --accent: #6384FF;
+  --accent-dim: #4465DF;
+  --accent-soft: rgba(99, 132, 255, 0.12);
+
+  /* Antique gold secondary accent for sparse hierarchy */
+  --accent-alt: #B89A67;
+  --accent-alt-dim: #967B4F;
 
   /* Editorial display serif + a contemporary, highly legible body sans,
      with a restrained slab mono reserved for metadata only. */
@@ -131,6 +135,10 @@ p:last-child {
   color: var(--text-secondary);
 }
 
+.text-accent-alt {
+  color: var(--accent-alt);
+}
+
 /* ---------------------------------------------------------------------- */
 /* Layout helpers                                                         */
 /* ---------------------------------------------------------------------- */
@@ -195,12 +203,12 @@ p:last-child {
 
 .link__arrow {
   display: inline-block;
-  transition: transform var(--dur-fast) var(--ease-physical);
+  transition: transform var(--dur-base) var(--ease-out);
 }
 
 .link:hover .link__arrow,
 .link:focus-visible .link__arrow {
-  transform: translate(3px, -3px);
+  transform: translate(2px, -2px) rotate(4deg);
 }
 
 .link--accent {
@@ -226,12 +234,14 @@ p:last-child {
 
 [data-reveal-line] + * {
   opacity: 0;
-  transition: opacity var(--dur-base) var(--ease-out);
+  transform: translateY(6px);
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
   transition-delay: 120ms;
 }
 
 [data-reveal-line].is-visible + * {
   opacity: 1;
+  transform: translateY(0);
 }
 
 /* ---------------------------------------------------------------------- */
@@ -281,6 +291,23 @@ p:last-child {
   animation: intro-in var(--dur-slow) var(--ease-out) forwards;
 }
 
+[data-intro-group] > * {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: intro-in var(--dur-slow) var(--ease-out) forwards;
+}
+
+[data-intro-group] > *:nth-child(1) { animation-delay: 200ms; }
+[data-intro-group] > *:nth-child(2) { animation-delay: 250ms; }
+[data-intro-group] > *:nth-child(3) { animation-delay: 300ms; }
+[data-intro-group] > *:nth-child(4) { animation-delay: 350ms; }
+[data-intro-group] > *:nth-child(5) { animation-delay: 400ms; }
+[data-intro-group] > *:nth-child(6) { animation-delay: 450ms; }
+[data-intro-group] > *:nth-child(7) { animation-delay: 500ms; }
+[data-intro-group] > *:nth-child(8) { animation-delay: 550ms; }
+[data-intro-group] > *:nth-child(9) { animation-delay: 600ms; }
+[data-intro-group] > *:nth-child(10) { animation-delay: 650ms; }
+
 @keyframes intro-in {
   to {
     opacity: 1;
@@ -300,7 +327,8 @@ p:last-child {
   [data-reveal-group] > *,
   [data-reveal-line],
   [data-reveal-line] + *,
-  [data-intro] {
+  [data-intro],
+  [data-intro-group] > * {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;

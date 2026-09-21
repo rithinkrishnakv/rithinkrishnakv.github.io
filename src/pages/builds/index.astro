@@ -241,12 +241,13 @@ const statusLabel: Record<string, string> = {
   .entry__action {
     white-space: nowrap;
     padding-top: 0.25rem;
-    transition: color var(--dur-fast) var(--ease-out);
+    transition: color var(--dur-fast) var(--ease-out), transform var(--dur-base) var(--ease-physical);
   }
 
   .entry__link:not([aria-disabled="true"]):hover .entry__action,
   .entry__link:not([aria-disabled="true"]):focus-visible .entry__action {
     color: var(--accent);
+    transform: translateX(4px);
   }
 
   @media (max-width: 36rem) {

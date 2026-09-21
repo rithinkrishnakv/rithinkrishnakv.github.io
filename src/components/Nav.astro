@@ -86,7 +86,7 @@ function isActive(href: string) {
     position: relative;
     padding-bottom: 0.2em;
     display: inline-block;
-    transition: color var(--dur-fast) var(--ease-out), letter-spacing var(--dur-base) var(--ease-physical);
+    transition: color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
   }
 
   .nav__link::after {
@@ -105,7 +105,7 @@ function isActive(href: string) {
   .nav__link:hover,
   .nav__link:focus-visible {
     color: var(--text);
-    letter-spacing: 0.04em;
+    transform: translateY(-1px);
   }
 
   .nav__link:hover::after,
