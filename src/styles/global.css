@@ -2,19 +2,20 @@
 /* Design tokens                                                          */
 /* ---------------------------------------------------------------------- */
 :root {
-  --bg: #090B10;
-  --bg-elevated: #10131A;
-  --border: #1D2230;
-  --border-soft: #141824;
+  --bg: #06090E;
+  --bg-highlight: #0D1520;
+  --bg-elevated: #0B111A;
+  --border: #1C2637;
+  --border-soft: #131D2A;
 
-  --text: #F2EFE8;
-  --text-secondary: #9EA4AF;
-  --text-tertiary: #646D82;
+  --text: #E8E4D3;
+  --text-secondary: #8A99B0;
+  --text-tertiary: #546378;
 
-  /* Cobalt accent for interaction */
-  --accent: #6384FF;
-  --accent-dim: #4465DF;
-  --accent-soft: rgba(99, 132, 255, 0.12);
+  /* Electric teal accent for interaction */
+  --accent: #00AEBB;
+  --accent-dim: #008B96;
+  --accent-soft: rgba(0, 174, 187, 0.10);
 
   /* Antique gold secondary accent for sparse hierarchy */
   --accent-alt: #B89A67;
@@ -32,9 +33,9 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --ease-physical: cubic-bezier(0.22, 1, 0.36, 1);
-  --dur-fast: 160ms;
-  --dur-base: 280ms;
-  --dur-slow: 520ms;
+  --dur-fast: 140ms;
+  --dur-base: 240ms;
+  --dur-slow: 480ms;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -63,6 +64,54 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-optical-sizing: auto;
+  position: relative;
+}
+
+/* Subtle living atmospheric background — layered pseudo-element with
+   very slow, imperceptible drift and opacity breathing (30s). Invisible at first
+   glance, giving the deep ink foundation a quiet, living tonal depth. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -5% -5%;
+  width: 110%;
+  height: 110%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 75% 50% at 50% -5%, var(--bg-highlight) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 45% at 85% 65%, rgba(0, 174, 187, 0.02) 0%, transparent 55%),
+    radial-gradient(ellipse 65% 50% at 15% 85%, rgba(13, 21, 32, 0.75) 0%, transparent 60%);
+  opacity: 0.85;
+  transform: translate3d(0, 0, 0);
+  animation: ambient-drift 30s var(--ease-in-out) infinite alternate;
+  will-change: opacity, transform;
+}
+
+@keyframes ambient-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translate3d(1%, -1.2%) scale(1.015);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate3d(-0.8%, 0.8%) scale(1.008);
+    opacity: 0.82;
+  }
+}
+
+@media (max-width: 48rem) {
+  body::before {
+    animation: none;
+    transform: none;
+    opacity: 0.85;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 img,
@@ -208,7 +257,7 @@ p:last-child {
 
 .link:hover .link__arrow,
 .link:focus-visible .link__arrow {
-  transform: translate(2px, -2px) rotate(4deg);
+  transform: translate(2px, -1px);
 }
 
 .link--accent {
@@ -251,8 +300,8 @@ p:last-child {
 /* ---------------------------------------------------------------------- */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(14px);
-  filter: blur(4px);
+  transform: translateY(12px);
+  filter: blur(2px);
   transition:
     opacity var(--dur-slow) var(--ease-out),
     transform var(--dur-slow) var(--ease-out),
@@ -321,6 +370,12 @@ p:last-child {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  body::before {
+    animation: none !important;
+    transform: none !important;
+    opacity: 0.85 !important;
   }
 
   [data-reveal],

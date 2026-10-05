@@ -623,11 +623,10 @@ const dataEndpoint = `${import.meta.env.BASE_URL}commons-data.json`.replace(/\/+
     color: var(--text-tertiary);
     font-size: 1.05rem;
     flex-shrink: 0;
-    transition: transform var(--dur-base) var(--ease-physical), color var(--dur-base) var(--ease-out);
+    transition: color var(--dur-base) var(--ease-out);
   }
 
   .search-shell:focus-within .search-icon {
-    transform: rotate(-8deg) scale(1.08);
     color: var(--accent);
   }
 
@@ -1047,7 +1046,7 @@ const dataEndpoint = `${import.meta.env.BASE_URL}commons-data.json`.replace(/\/+
 
   :global(.entry__link:hover .entry__arrow),
   :global(.entry__link:focus-visible .entry__arrow) {
-    transform: translate(2px, -2px) rotate(4deg);
+    transform: translate(2px, -2px);
     color: var(--accent);
   }
 
