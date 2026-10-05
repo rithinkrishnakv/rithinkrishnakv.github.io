@@ -1,5 +1,5 @@
 ---
-name: "MSWhisper"
+name: "MshWhisper"
 status: "active"
 type: "LAN mesh chat"
 summary: "A zero-config, serverless LAN mesh chat client with automated UDP peer discovery and end-to-end encryption."
