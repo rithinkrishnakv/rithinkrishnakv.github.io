@@ -143,6 +143,28 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
     text-underline-offset: 3px;
   }
 
+  .note__body :global(.note__sources) {
+    margin-top: 2.25rem;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: var(--text-tertiary);
+  }
+
+  .note__body :global(.note__sources a) {
+    color: var(--text-secondary);
+    white-space: nowrap;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--border);
+    transition: color var(--dur-base) var(--ease-out), text-decoration-color var(--dur-base) var(--ease-out);
+  }
+
+  .note__body :global(.note__sources a:hover),
+  .note__body :global(.note__sources a:focus-visible) {
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+  }
+
   .note__nav {
     display: flex;
     justify-content: space-between;
