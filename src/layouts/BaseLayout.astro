@@ -9,16 +9,46 @@ interface Props {
   description?: string;
   /** Set to false on pages like 404 that shouldn't be indexed. */
   index?: boolean;
+  /** Open Graph type. Use "article" for note pages. Defaults to "website". */
+  ogType?: "website" | "article";
+  /**
+   * Site-relative path (e.g. "/og/my-note.png") or absolute URL to the
+   * Open Graph preview image for this page. Falls back to the default OG image.
+   */
+  ogImage?: string;
+  /** Alt text for the OG image. */
+  ogImageAlt?: string;
 }
 
 const {
   title,
   description = SITE.description,
   index = true,
+  ogType = "website",
+  ogImage,
+  ogImageAlt,
 } = Astro.props;
 
 const pageTitle = title === SITE.name ? title : `${title} — ${SITE.shortName}`;
 const canonicalURL = new URL(Astro.url.pathname, SITE.url);
+
+// Resolve the OG image to an absolute HTTPS URL.
+// Priority: prop value → default image.
+const DEFAULT_OG_IMAGE = "/og/default.png";
+const OG_IMAGE_WIDTH = 1200;
+const OG_IMAGE_HEIGHT = 630;
+
+function resolveOgImage(path: string): string {
+  if (path.startsWith("http://") || path.startsWith("https://")) return path;
+  return new URL(path, SITE.url).toString();
+}
+
+const resolvedOgImage = resolveOgImage(ogImage ?? DEFAULT_OG_IMAGE);
+const resolvedOgImageAlt =
+  ogImageAlt ?? `Social preview image for ${pageTitle}`;
+
+// Use summary_large_image card to show the preview image in social apps.
+const twitterCard = "summary_large_image";
 ---
 
 <!doctype html>
@@ -34,16 +64,22 @@ const canonicalURL = new URL(Astro.url.pathname, SITE.url);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:image" content={resolvedOgImage} />
+    <meta property="og:image:secure_url" content={resolvedOgImage} />
+    <meta property="og:image:width" content={String(OG_IMAGE_WIDTH)} />
+    <meta property="og:image:height" content={String(OG_IMAGE_HEIGHT)} />
+    <meta property="og:image:alt" content={resolvedOgImageAlt} />
 
     <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content={twitterCard} />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={resolvedOgImage} />
 
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
 

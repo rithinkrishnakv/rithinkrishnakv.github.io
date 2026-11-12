@@ -22,6 +22,8 @@ const notes = defineCollection({
     draft: z.boolean().default(false),
     // short line shown in note listings / social previews
     summary: z.string().optional(),
+    // site-relative path to a custom Open Graph image, e.g. "/og/my-note.png"
+    ogImage: z.string().optional(),
   }),
 });
 

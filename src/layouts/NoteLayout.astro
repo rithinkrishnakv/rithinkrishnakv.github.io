@@ -8,11 +8,13 @@ interface Props {
   updated?: Date;
   tags: string[];
   summary?: string;
+  /** Site-relative path to a custom OG image for this article, e.g. "/og/my-note.png" */
+  ogImage?: string;
   prev?: { id: string; title: string } | null;
   next?: { id: string; title: string } | null;
 }
 
-const { title, subtitle, date, updated, tags, summary, prev, next } = Astro.props;
+const { title, subtitle, date, updated, tags, summary, ogImage, prev, next } = Astro.props;
 
 const dateFmt = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -21,7 +23,13 @@ const dateFmt = new Intl.DateTimeFormat("en-US", {
 });
 ---
 
-<BaseLayout title={title} description={summary}>
+<BaseLayout
+  title={title}
+  description={summary}
+  ogType="article"
+  ogImage={ogImage}
+  ogImageAlt={title}
+>
   <article class="note">
     <header class="note__header wrap" data-reveal-group>
       <p class="meta">
