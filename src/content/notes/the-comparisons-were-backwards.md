@@ -3,7 +3,7 @@ title: "The comparisons were backwards"
 date: 2026-11-12
 tags: ["security-research", "cybersecurity"]
 summary: "A small string-comparison bug in Toybox's SUID-enabled umount authorization logic, fixed upstream and acknowledged by its maintainer."
-ogImage: "/og/the-comparisons-were-backwards.png"
+ogImage: "/og/github-avatar.png"
 ---
 
 The part I keep thinking about isn't the bug.

@@ -34,9 +34,9 @@ const canonicalURL = new URL(Astro.url.pathname, SITE.url);
 
 // Resolve the OG image to an absolute HTTPS URL.
 // Priority: prop value → default image.
-const DEFAULT_OG_IMAGE = "/og/default.png";
+const DEFAULT_OG_IMAGE = "/og/github-avatar.png";
 const OG_IMAGE_WIDTH = 1200;
-const OG_IMAGE_HEIGHT = 630;
+const OG_IMAGE_HEIGHT = 1200;
 
 function resolveOgImage(path: string): string {
   if (path.startsWith("http://") || path.startsWith("https://")) return path;
